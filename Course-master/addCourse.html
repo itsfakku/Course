@@ -58,7 +58,7 @@
     <![endif]-->
 
   <!--custome style-->
-  <link rel="stylesheet" href="/assets/css/style.csss" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body class="no-skin">
@@ -515,30 +515,32 @@
                         <label>Choose teacher to</label>
                         search <input type="text" id="search" onkeyup="Search()"
                           placeholder="Type here for Searching " /></br></br>
-                        <table id="tableData" style="cursor: pointer" class="table table-borderless table-hover">
-                          <thead>
-                            <th>Name</th>
-                            <th>Email</th>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>teacher 1</td>
-                              <td>teacher1@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td>teacher 2</td>
-                              <td>teacher2@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td>teacher 3</td>
-                              <td>teacher3@gmail.com</td>
-                            </tr>
-                            <tr>
-                              <td>teacher 4</td>
-                              <td>teacher4@gmail.com</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <div id="scroll">
+                          <table id="tableData" style="cursor: pointer" class="table table-borderless table-hover">
+                            <thead>
+                             <th>Name</th>
+                              <th>Email</th>
+                           </thead>
+                            <tbody>
+                               <tr>
+                                <td>teacher 1</td>
+                                 <td>teacher1@gmail.com</td>
+                               </tr>
+                              <tr>
+                                <td>teacher 2</td>
+                                <td>teacher2@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <td>teacher 3</td>
+                                <td>teacher3@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <td>teacher 4</td>
+                                <td>teacher4@gmail.com</td>
+                              </tr>
+                            </tbody>
+                            </table>
+                        </div>
                         <label>Current teacher</label>
                         <table class="table table-borderless" id="teacher">
                           <thead>
