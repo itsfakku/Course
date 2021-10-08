@@ -378,69 +378,101 @@
 
 <div id="sidebar" class="sidebar responsive ace-save-state">
 	<script type="text/javascript">
-	  try {
+	try {
 		ace.settings.loadState("sidebar");
-	  } catch (e) {}
+	} catch (e) {}
 	</script>
 	<ul class="nav nav-list">
-	  <li class="">
+	<li class="">
 		<a href="index.html">
-		  <i class="menu-icon fa fa-tachometer"></i>
-		  <span class="menu-text"> Dashboard </span>
+		<i class="menu-icon fa fa-tachometer"></i>
+		<span class="menu-text"> Dashboard </span>
 		</a>
-	  </li>
-	  <li class="">
-		<a href="category.html">
-		  <i class="menu-icon fa fa-list"></i>
-		  <span class="menu-text"> Categories </span>
-		</a>
-	  </li>
-	  <li class="">
-		<a href="topic.html">
-		  <i class="menu-icon fa fa-list"></i>
-		  <span class="menu-text"> Topic </span>
-		</a>
-	  </li>
-	  <li class="">
-		<a href="#" class="dropdown-toggle">
-		  <i class="menu-icon fa fa-list"></i>
-		  <span class="menu-text"> Course </span>
+	</li>
+	<li class="">
+		<a href="" class="dropdown-toggle">
+		<i class="menu-icon fa fa-list"></i>
+		<span class="menu-text"> Category </span>
 
-		  <b class="arrow fa fa-angle-down"></b>
+		<b class="arrow fa fa-angle-down"></b>
 		</a>
 
 		<b class="arrow"></b>
 
 		<ul class="submenu">
-		  <li class="">
-			<a href="course.html">
-			  <i class="menu-icon fa fa-caret-right"></i>
-			  List of Course
+			<li class="">
+				<a href="listcategory.html">
+				<i class="menu-icon fa fa-caret-right"></i>
+				List Category
+				</a>
+	
+				<b class="arrow"></b>
+			</li>
+		<li class="">
+			<a href="addcategory.html">
+			<i class="menu-icon fa fa-caret-right"></i>
+			Add Category
 			</a>
 
 			<b class="arrow"></b>
-		  </li>
+		</li>
 
-		  <li class="">
-			<a href="addCourse.html">
-			  <i class="menu-icon fa fa-caret-right"></i>
-			  Add New Course
+		<li class="">
+			<a href="editCategory.html">
+			<i class="menu-icon fa fa-caret-right"></i>
+			Edit Category
 			</a>
 
 			<b class="arrow"></b>
-		  </li>
-		  <li class="">
-			<a href="editCourse.html">
-			  <i class="menu-icon fa fa-caret-right"></i>
-			  Edit Course
-			</a>
-
-			<b class="arrow"></b>
-		  </li>
+		</li>
 		</ul>
-	  </li>
-	  <li class="">
+	</li>
+	<li class="">
+		<a href="topic.html">
+		<i class="menu-icon fa fa-list"></i>
+		<span class="menu-text"> Topic </span>
+		</a>
+	</li>
+	<li class="">
 		<a href="#" class="dropdown-toggle">
+		<i class="menu-icon fa fa-list"></i>
+		<span class="menu-text"> Course </span>
+
+		<b class="arrow fa fa-angle-down"></b>
+		</a>
+
+		<b class="arrow"></b>
+
+		<ul class="submenu">
+		<li class="">
+			<a href="course.html">
+			<i class="menu-icon fa fa-caret-right"></i>
+			List of Course
+			</a>
+
+			<b class="arrow"></b>
+		</li>
+
+		<li class="">
+			<a href="addCourse.html">
+			<i class="menu-icon fa fa-caret-right"></i>
+			Add New Course
+			</a>
+
+			<b class="arrow"></b>
+		</li>
+		<li class="">
+			<a href="editCourse.html">
+			<i class="menu-icon fa fa-caret-right"></i>
+			Edit Course
+			</a>
+
+			<b class="arrow"></b>
+		</li>
+		</ul>
+	</li>
+	<li class="">
+		<a href="" class="dropdown-toggle">
 		<i class="menu-icon fa fa-user"></i>
 		<span class="menu-text"> User </span>
 
@@ -453,7 +485,7 @@
 		<li class="">
 			<a href="profile.html">
 			<i class="menu-icon fa fa-caret-right"></i>
-			View Profile
+			View profile
 			</a>
 
 			<b class="arrow"></b>
@@ -468,35 +500,34 @@
 			<b class="arrow"></b>
 		</li>
 		<li class="">
-			<a href="">
+			<a href="#">
 			<i class="menu-icon fa fa-caret-right"></i>
-			Add Profile
+			Add User
 			</a>
 
 			<b class="arrow"></b>
 		</li>
 		<li class="">
-			<a href="">
+			<a href="#">
 			<i class="menu-icon fa fa-caret-right"></i>
-			Edit Profile
+			Edit User
 			</a>
 
 			<b class="arrow"></b>
 		</li>
 		</ul>
-		
 	</li>
 	</ul>
 
 	<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-	  <i
+	<i
 		id="sidebar-toggle-icon"
 		class="ace-icon fa fa-angle-double-left ace-save-state"
 		data-icon1="ace-icon fa fa-angle-double-left"
 		data-icon2="ace-icon fa fa-angle-double-right"
-	  ></i>
+	></i>
 	</div>
-  </div>
+</div>
 
 			<div class="main-content">
 				<div class="main-content-inner">
