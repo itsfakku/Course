@@ -73,3 +73,10 @@ img {
 #next {
   float: right;
 }
+#scroll
+{
+  position: relative;
+ height: 150px;
+ overflow: auto;
+ margin-bottom: 10px;
+}
