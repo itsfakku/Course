@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>User Profile</title>
+		<title>User Profile Page - Ace Admin</title>
 
 		<meta name="description" content="3 styles with inline editable feature" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -18,13 +18,16 @@
 		<link rel="stylesheet" href="assets/css/select2.min.css" />
 		<link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
 		<link rel="stylesheet" href="assets/css/bootstrap-editable.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-timepicker.min.css" />
+		<link rel="stylesheet" href="assets/css/daterangepicker.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
 
 		<!-- text fonts -->
 		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
 
 		<!-- ace styles -->
 		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
-
 		<!--[if lte IE 9]>
 			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
@@ -73,6 +76,8 @@
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
 						<li class="grey dropdown-modal">
+							
+
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
 								<li class="dropdown-header">
 									<i class="ace-icon fa fa-check"></i>
@@ -565,7 +570,7 @@
 							<li>
 								<a href="#">User</a>
 							</li>
-							<li class="active">User Profile</li>
+							<li class="active">Add User</li>
 						</ul><!-- /.breadcrumb -->
 					</div>
 
@@ -573,276 +578,154 @@
 
 						<div class="page-header">
 							<h1>
-								User Profile
+								Add User
 							</h1>
 						</div><!-- /.page-header -->
 
-						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<div>
-									<div id="user-profile-1" class="user-profile row">
-										<div class="col-xs-12 col-sm-3 center">
-											<div>
-												<span class="profile-picture">
-													<img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="assets/images/avatars/profile-pic.jpg" />
-												</span>
-
-												<div class="space-4"></div>
-
-												<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
-													<div class="inline position-relative">
-														<a href="#" class="user-title-label dropdown-toggle" data-toggle="dropdown">
-															<i class="ace-icon fa fa-circle light-green"></i>
-															&nbsp;
-															<span class="white">Alex M. Doe</span>
-														</a>
-
-														
-													</div>
-												</div>
-											</div>
-
-											<div class="space-6"></div>
-
-											<div class="profile-contact-info">
-												<div class="profile-contact-links align-left">
-													<a href="#" class="btn btn-link">
-														<i class="ace-icon fa fa-plus-circle bigger-120 green"></i>
-														Add as a friend
-													</a>
-
-													<a href="#" class="btn btn-link">
-														<i class="ace-icon fa fa-envelope bigger-120 pink"></i>
-														Send a message
-													</a>
-
-													<a href="#" class="btn btn-link">
-														<i class="ace-icon fa fa-globe bigger-125 blue"></i>
-														www.alexdoe.com
-													</a>
-												</div>
-
-												<div class="space-6"></div>
-
-												<div class="profile-social-links align-center">
-													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Facebook">
-														<i class="middle ace-icon fa fa-facebook-square fa-2x blue"></i>
-													</a>
-
-													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Twitter">
-														<i class="middle ace-icon fa fa-twitter-square fa-2x light-blue"></i>
-													</a>
-
-													<a href="#" class="tooltip-error" title="" data-original-title="Visit my Pinterest">
-														<i class="middle ace-icon fa fa-pinterest-square fa-2x red"></i>
-													</a>
-												</div>
-											</div>
-
-										</div>
-
-										<div class="col-xs-12 col-sm-9">
-											<div class="space-12"></div>
-											<!--user profile-->
-											<div class="profile-user-info profile-user-info-striped">
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Username </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="username">abc</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Location </div>
-
-													<div class="profile-info-value">
-														<i class="fa fa-map-marker light-orange bigger-110"></i>
-														<span class="editable" id="country">Ha Noi</span>
-														<span class="editable" id="city">Viet Nam</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Age </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="age">20</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Phone Number </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="signup">12345</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Email </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="login">abc@abc</span>
-													</div>
-												</div>
-
-												
-											</div>
-
-											<div class="space-20"></div>
-											<!--course profiles-->
-											<div>
-												<div id="scroll" style="overflow: auto; height: 350px;">
-													<table id="dynamic-table" class="table table-striped table-bordered table-hover">
-														<thead>
-															<tr>
-																<!-- <th class="center">
-																	<label class="pos-rel">
-																		<input type="checkbox" class="ace" />
-																		<span class="lbl"></span>
-																	</label>
-																</th> -->
-																<th class="hidden-480">Course Id</th>
-																<th>Course Name</th>
-																<th class="hidden-480">Teacher</th>
-		
-																<th>
-																	<i class="hidden-480"></i>
-																	Grade
-																</th>
-																<th class="hidden-480">Status</th>
-		
-																
-															</tr>
-														</thead>
-														
-														<tbody>
-															
-															<tr>																		
-																<td>
-																	<a href="#">Svm12</a>
-																</td>
-																<td>abc</td>
-																<td class="hidden-480">abc</td>
-																<td>40.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-warning">Fail</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>	
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>	
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>	
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>																													
-														</tbody>
-														
-													</table>
-												</div>
-											</div>
-
-											
+						<!-- role -->
+						<div class="col-xs-10" style="border: 1px solid #b1a5a5c7; margin-left: 10%;">
+							<div class="form-group" style="margin-left: 40px;">
+							<label>Role</label><br>										
+								<div class="form-check form-check-inline col-xs-2"style="margin-left: 15%;">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+									<label class="form-check-label" for="inlineRadio1">admin</label>
+								</div >
+								<div class="form-check form-check-inline col-xs-2">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+									<label class="form-check-label" for="inlineRadio2">Staff</label>
+								</div>
+								<div class="form-check form-check-inline col-xs-2">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+									<label class="form-check-label" for="inlineRadio3">Teacher</label>
+								</div>
+								<div class="form-check form-check-inline col-xs-2">
+									<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+									<label class="form-check-label" for="inlineRadio3">Student</label>
+								</div>
+							</div><br>
+							<div class="form-group" style="margin-left: 40px;">
+								<label for="cname">User Name</label>
+								<input
+								  type="text"
+								  name="cname"
+								  id="cname"
+								  placeholder="Enter name"
+								  style="width: 100%;"
+								/>
+							</div>
+							<div class="form-group" style="margin-left: 40px;">
+								<label for="cname">Password</label>
+								<input
+								  type="text"
+								  name="pass"
+								  id="pass"
+								  placeholder="Enter Password"
+								  style="width: 100%;"
+								/>
+							</div>							
+						</div>
+						
+						<div class="col-xs-10" style="border: 1px solid #b1a5a5c7; margin-left: 10%; margin-top: 20px;">
+							<div class="col-xs-5" style="margin-top: 5px;margin-left: 40px;">
+								<div class="row">
+									<div class="form-group">
+										<label for="cname">First Name</label>
+										<input
+										  type="text"
+										  name="cname"
+										  id="cname"
+										  placeholder="Enter First name"
+										  style="width: 100%;"
+										/>
+									</div>
+									<div class="form-group">
+										<label for="cname">Email</label>
+										<input
+										  type="text"
+										  name="pass"
+										  id="email"
+										  placeholder="Enter Email"
+										  style="width: 100%;"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-5" style="margin-top: 5px;">
+								<div class="form-group">
+									<div class="form-group">
+										<label for="cname">Last Name</label>
+										<input
+										  type="text"
+										  name="cname"
+										  id="cname"
+										  placeholder="Enter Last name"
+										  style="width: 100%;"
+										/>
+									</div>
+									<div class="form-group">
+										<label for="cname">Phone</label>
+										<input
+										  type="text"
+										  name="pass"
+										  id="pass"
+										  placeholder="Enter Phone"
+										  style="width: 100%;"
+										/>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-10" style="margin-left: 25px;">
+								<label>Date of birth</label>
+								<div class="row">
+									
+									<div class="col-xs-8 col-sm-11">
+										<div class="input-group">
+											<input class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd-mm-yyyy" />
+											<span class="input-group-addon">
+												<i class="fa fa-calendar bigger-110"></i>
+											</span>
 										</div>
 									</div>
-								</div>								
-
-								<!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
+								</div><br>
+								<div class="form-group">
+									<label for="cname">Phone</label>
+									<input
+									type="text"
+									name="pass"
+									id="pass"
+									placeholder="Enter Phone"
+									style="width: 100%;"
+									/>
+								</div>
+								<!--image-->
+								<div class="widget-body">
+									<label for="cname">Image</label>
+									<div class="widget-main">
+										<div class="form-group">											
+											<div class="col-xs-12">
+												<input type="file" id="id-input-file-2" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
 					</div><!-- /.page-content -->
+				</div>
+				<div class="form-footer" style="float: right; margin-right: 20px; margin-top: 30px;">
+					<button class="btn btn-white btn-default btn-round">
+					  <i class="ace-icon fa fa-times red2"></i>
+					  Cancel
+					</button>
+					<button class="btn btn-white btn-success btn-round">
+					  <i class="ace-icon fa fa-check"></i>
+					  Save & Add Another
+					</button>
+					<button class="btn btn-white btn-info btn-bold">
+					  <i class="ace-icon fa fa-floppy-o bigger-120 blue"></i>
+					  Save
+					</button>
 				</div>
 			</div><!-- /.main-content -->
 
@@ -1353,6 +1236,32 @@
 					} catch(e) {}
 					$('[class*=select2]').remove();
 				});
+				//datepicker plugin
+				//link
+				$('.date-picker').datepicker({
+					autoclose: true,
+					todayHighlight: true
+				})
+				//show datepicker when clicking on the icon
+				.next().on(ace.click_event, function(){
+					$(this).prev().focus();
+				});
+			});
+			if(!ace.vars['old_ie']) $('#date-timepicker1').datetimepicker({
+			//format: 'MM/DD/YYYY h:mm:ss A',//use this option to display seconds
+			icons: {
+			time: 'fa fa-clock-o',
+			date: 'fa fa-calendar',
+			up: 'fa fa-chevron-up',
+			down: 'fa fa-chevron-down',
+			previous: 'fa fa-chevron-left',
+			next: 'fa fa-chevron-right',
+			today: 'fa fa-arrows ',
+			clear: 'fa fa-trash',
+			close: 'fa fa-times'
+			}
+			}).next().on(ace.click_event, function(){
+			$(this).prev().focus();
 			});
 		</script>
 	</body>
