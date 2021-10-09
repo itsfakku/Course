@@ -1,14 +1,29 @@
 var table = document.getElementById("tableData");
+var teacher = document.getElementById("teacher1");
 for (var i = 1; i <= table.rows.length; i++) {
   table.rows[i].onclick = function () {
     tableText(this);
   };
 }
 function tableText(tableRow) {
+  var count = 1;
   var name = tableRow.childNodes[1].innerHTML;
   var email = tableRow.childNodes[3].innerHTML;
-  document.getElementById("name").innerHTML = name;
-  document.getElementById("email").innerHTML = email;
+  if (teacher.rows.length <= 1) {
+    var btn = "<td><input type='checkbox' name='record'></td>";
+    var markup =
+      "<tr id='row'>" +
+      btn +
+      " <td id='name'>" +
+      name +
+      "</td> <td id='email'>" +
+      email +
+      "</td></tr>";
+    $("#bodyt").append(markup);
+    count++;
+  } else {
+    alert("You can assign only 1 teacher");
+  }
 }
 function Search() {
   var searchValue = document.getElementById("search").value; //get value from textBox by ID Field onkeyUp function

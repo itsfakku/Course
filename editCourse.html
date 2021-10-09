@@ -1,380 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>Edit Course</title>
 
-		<meta name="description" content="and Validation" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8" />
+	<title>Edit Course</title>
 
-		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="assets/css/daterangepicker.min.css" />
-		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="assets/css/select2.min.css" />
+	<meta name="description" content="and Validation" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-		<!-- text fonts -->
-		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
-		<link rel="stylesheet" href="assets/css/dropzone.min.css" />
+	<!-- bootstrap & fontawesome -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/daterangepicker.min.css" />
+	<!-- page specific plugin styles -->
+	<link rel="stylesheet" href="assets/css/select2.min.css" />
 
-		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
-		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css"/>
-		<link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
-		<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+	<!-- text fonts -->
+	<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+	<link rel="stylesheet" href="assets/css/dropzone.min.css" />
 
-		<!--[if lte IE 9]>
+	<!-- ace styles -->
+	<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css" />
+	<link rel="stylesheet" href="assets/css/daterangepicker.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
+	<link rel="stylesheet" href="assets/css/bootstrap-timepicker.min.css" />
+	<link rel="stylesheet" href="/assets/css/bootstrap-datetimepicker.min.css" />
+
+
+	<!--[if lte IE 9]>
 			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
-		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
-		<style>
-			#scroll{
-			  position: relative;
-			  height: 200px;
-			  overflow: scroll;
-			  margin-bottom: 10px;
-			}
-		  </style>
-		<!--[if lte IE 9]>
+	<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+	<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+	<style>
+		#scroll {
+			position: relative;
+			height: 200px;
+			overflow: scroll;
+			margin-bottom: 10px;
+		}
+	</style>
+	<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
 
-		<!-- inline styles related to this page -->
+	<!-- inline styles related to this page -->
 
-		<!-- ace settings handler -->
-		<script src="assets/js/ace-extra.min.js"></script>
+	<!-- ace settings handler -->
+	<script src="assets/js/ace-extra.min.js"></script>
 
-		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+	<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
-		<!--[if lte IE 8]>
+	<!--[if lte IE 8]>
 		<script src="assets/js/html5shiv.min.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body class="no-skin">
-		<div id="navbar" class="navbar navbar-default          ace-save-state">
-			<div class="navbar-container ace-save-state" id="navbar-container">
-				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
-					<span class="sr-only">Toggle sidebar</span>
+<body class="no-skin">
+	<div id="navbar" class="navbar navbar-default          ace-save-state">
+		<div class="navbar-container ace-save-state" id="navbar-container">
+			<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+				<span class="sr-only">Toggle sidebar</span>
 
-					<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
 
-					<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
 
-					<span class="icon-bar"></span>
-				</button>
+				<span class="icon-bar"></span>
+			</button>
 
-				<div class="navbar-header pull-left">
-					<a href="index.html" class="navbar-brand">
-						<small>
-							<i class="fa fa-leaf"></i>
-							CMS
-						</small>
-					</a>
-				</div>
-				<div class="navbar-buttons navbar-header pull-right" role="navigation">
-					<ul class="nav ace-nav">
-						<li class="grey dropdown-modal">
+			<div class="navbar-header pull-left">
+				<a href="index.html" class="navbar-brand">
+					<small>
+						<i class="fa fa-leaf"></i>
+						CMS
+					</small>
+				</a>
+			</div>
+			<div class="navbar-buttons navbar-header pull-right" role="navigation">
+				<ul class="nav ace-nav">
+					<li class="grey dropdown-modal">
 
-							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-check"></i>
-									4 Tasks to complete
-								</li>
+						<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+							<li class="dropdown-header">
+								<i class="ace-icon fa fa-check"></i>
+								4 Tasks to complete
+							</li>
 
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Software Update</span>
-													<span class="pull-right">65%</span>
-												</div>
+							<li class="dropdown-content">
+								<ul class="dropdown-menu dropdown-navbar">
+									<li>
+										<a href="#">
+											<div class="clearfix">
+												<span class="pull-left">Software Update</span>
+												<span class="pull-right">65%</span>
+											</div>
 
-												<div class="progress progress-mini">
-													<div style="width:65%" class="progress-bar"></div>
-												</div>
-											</a>
-										</li>
+											<div class="progress progress-mini">
+												<div style="width:65%" class="progress-bar"></div>
+											</div>
+										</a>
+									</li>
 
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Hardware Upgrade</span>
-													<span class="pull-right">35%</span>
-												</div>
+									<li>
+										<a href="#">
+											<div class="clearfix">
+												<span class="pull-left">Hardware Upgrade</span>
+												<span class="pull-right">35%</span>
+											</div>
 
-												<div class="progress progress-mini">
-													<div style="width:35%" class="progress-bar progress-bar-danger"></div>
-												</div>
-											</a>
-										</li>
+											<div class="progress progress-mini">
+												<div style="width:35%" class="progress-bar progress-bar-danger"></div>
+											</div>
+										</a>
+									</li>
 
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Unit Testing</span>
-													<span class="pull-right">15%</span>
-												</div>
+									<li>
+										<a href="#">
+											<div class="clearfix">
+												<span class="pull-left">Unit Testing</span>
+												<span class="pull-right">15%</span>
+											</div>
 
-												<div class="progress progress-mini">
-													<div style="width:15%" class="progress-bar progress-bar-warning"></div>
-												</div>
-											</a>
-										</li>
+											<div class="progress progress-mini">
+												<div style="width:15%" class="progress-bar progress-bar-warning"></div>
+											</div>
+										</a>
+									</li>
 
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">Bug Fixes</span>
-													<span class="pull-right">90%</span>
-												</div>
+									<li>
+										<a href="#">
+											<div class="clearfix">
+												<span class="pull-left">Bug Fixes</span>
+												<span class="pull-right">90%</span>
+											</div>
 
-												<div class="progress progress-mini progress-striped active">
-													<div style="width:90%" class="progress-bar progress-bar-success"></div>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
+											<div class="progress progress-mini progress-striped active">
+												<div style="width:90%" class="progress-bar progress-bar-success"></div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</li>
 
-								<li class="dropdown-footer">
-									<a href="#">
-										See tasks with details
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
-						</li>
+							<li class="dropdown-footer">
+								<a href="#">
+									See tasks with details
+									<i class="ace-icon fa fa-arrow-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
 
-						<li class="purple dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-								<i class="ace-icon fa fa-bell icon-animated-bell"></i>
-								<span class="badge badge-important">8</span>
-							</a>
+					<li class="purple dropdown-modal">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<i class="ace-icon fa fa-bell icon-animated-bell"></i>
+							<span class="badge badge-important">8</span>
+						</a>
 
-							<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-exclamation-triangle"></i>
-									8 Notifications
-								</li>
+						<ul
+							class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+							<li class="dropdown-header">
+								<i class="ace-icon fa fa-exclamation-triangle"></i>
+								8 Notifications
+							</li>
 
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar navbar-pink">
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
-														New Comments
-													</span>
-													<span class="pull-right badge badge-info">+12</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<i class="btn btn-xs btn-primary fa fa-user"></i>
-												Bob just signed up as an editor ...
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
-														New Orders
-													</span>
-													<span class="pull-right badge badge-success">+8</span>
-												</div>
-											</a>
-										</li>
-
-										<li>
-											<a href="#">
-												<div class="clearfix">
-													<span class="pull-left">
-														<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
-														Followers
-													</span>
-													<span class="pull-right badge badge-info">+11</span>
-												</div>
-											</a>
-										</li>
-									</ul>
-								</li>
-
-								<li class="dropdown-footer">
-									<a href="#">
-										See all notifications
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="green dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
-								<span class="badge badge-success">5</span>
-							</a>
-
-							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
-								<li class="dropdown-header">
-									<i class="ace-icon fa fa-envelope-o"></i>
-									5 Messages
-								</li>
-
-								<li class="dropdown-content">
-									<ul class="dropdown-menu dropdown-navbar">
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Alex:</span>
-														Ciao sociis natoque penatibus et auctor ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>a moment ago</span>
-													</span>
+							<li class="dropdown-content">
+								<ul class="dropdown-menu dropdown-navbar navbar-pink">
+									<li>
+										<a href="#">
+											<div class="clearfix">
+												<span class="pull-left">
+													<i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+													New Comments
 												</span>
-											</a>
-										</li>
+												<span class="pull-right badge badge-info">+12</span>
+											</div>
+										</a>
+									</li>
 
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Susan:</span>
-														Vestibulum id ligula porta felis euismod ...
-													</span>
+									<li>
+										<a href="#">
+											<i class="btn btn-xs btn-primary fa fa-user"></i>
+											Bob just signed up as an editor ...
+										</a>
+									</li>
 
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>20 minutes ago</span>
-													</span>
+									<li>
+										<a href="#">
+											<div class="clearfix">
+												<span class="pull-left">
+													<i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i>
+													New Orders
 												</span>
-											</a>
-										</li>
+												<span class="pull-right badge badge-success">+8</span>
+											</div>
+										</a>
+									</li>
 
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Bob:</span>
-														Nullam quis risus eget urna mollis ornare ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>3:15 pm</span>
-													</span>
+									<li>
+										<a href="#">
+											<div class="clearfix">
+												<span class="pull-left">
+													<i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+													Followers
 												</span>
-											</a>
-										</li>
+												<span class="pull-right badge badge-info">+11</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</li>
 
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Kate:</span>
-														Ciao sociis natoque eget urna mollis ornare ...
-													</span>
+							<li class="dropdown-footer">
+								<a href="#">
+									See all notifications
+									<i class="ace-icon fa fa-arrow-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
 
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>1:33 pm</span>
-													</span>
+					<li class="green dropdown-modal">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+							<span class="badge badge-success">5</span>
+						</a>
+
+						<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+							<li class="dropdown-header">
+								<i class="ace-icon fa fa-envelope-o"></i>
+								5 Messages
+							</li>
+
+							<li class="dropdown-content">
+								<ul class="dropdown-menu dropdown-navbar">
+									<li>
+										<a href="#" class="clearfix">
+											<img src="assets/images/avatars/avatar.png" class="msg-photo"
+												alt="Alex's Avatar" />
+											<span class="msg-body">
+												<span class="msg-title">
+													<span class="blue">Alex:</span>
+													Ciao sociis natoque penatibus et auctor ...
 												</span>
-											</a>
-										</li>
 
-										<li>
-											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
-												<span class="msg-body">
-													<span class="msg-title">
-														<span class="blue">Fred:</span>
-														Vestibulum id penatibus et auctor  ...
-													</span>
-
-													<span class="msg-time">
-														<i class="ace-icon fa fa-clock-o"></i>
-														<span>10:09 am</span>
-													</span>
+												<span class="msg-time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span>a moment ago</span>
 												</span>
-											</a>
-										</li>
-									</ul>
-								</li>
+											</span>
+										</a>
+									</li>
 
-								<li class="dropdown-footer">
-									<a href="inbox.html">
-										See all messages
-										<i class="ace-icon fa fa-arrow-right"></i>
-									</a>
-								</li>
-							</ul>
-						</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="assets/images/avatars/avatar3.png" class="msg-photo"
+												alt="Susan's Avatar" />
+											<span class="msg-body">
+												<span class="msg-title">
+													<span class="blue">Susan:</span>
+													Vestibulum id ligula porta felis euismod ...
+												</span>
 
-						<li class="light-blue dropdown-modal">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
-								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
-								</span>
+												<span class="msg-time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span>20 minutes ago</span>
+												</span>
+											</span>
+										</a>
+									</li>
 
-								<i class="ace-icon fa fa-caret-down"></i>
-							</a>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="assets/images/avatars/avatar4.png" class="msg-photo"
+												alt="Bob's Avatar" />
+											<span class="msg-body">
+												<span class="msg-title">
+													<span class="blue">Bob:</span>
+													Nullam quis risus eget urna mollis ornare ...
+												</span>
 
-							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-cog"></i>
-										Settings
-									</a>
-								</li>
+												<span class="msg-time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span>3:15 pm</span>
+												</span>
+											</span>
+										</a>
+									</li>
 
-								<li>
-									<a href="profile.html">
-										<i class="ace-icon fa fa-user"></i>
-										Profile
-									</a>
-								</li>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="assets/images/avatars/avatar2.png" class="msg-photo"
+												alt="Kate's Avatar" />
+											<span class="msg-body">
+												<span class="msg-title">
+													<span class="blue">Kate:</span>
+													Ciao sociis natoque eget urna mollis ornare ...
+												</span>
 
-								<li class="divider"></li>
+												<span class="msg-time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span>1:33 pm</span>
+												</span>
+											</span>
+										</a>
+									</li>
 
-								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-power-off"></i>
-										Logout
-									</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div><!-- /.navbar-container -->
-		</div>
+									<li>
+										<a href="#" class="clearfix">
+											<img src="assets/images/avatars/avatar5.png" class="msg-photo"
+												alt="Fred's Avatar" />
+											<span class="msg-body">
+												<span class="msg-title">
+													<span class="blue">Fred:</span>
+													Vestibulum id penatibus et auctor ...
+												</span>
 
-		<div class="main-container ace-save-state" id="main-container">
-			<script type="text/javascript">
-				try{ace.settings.loadState('main-container')}catch(e){}
-			</script>
+												<span class="msg-time">
+													<i class="ace-icon fa fa-clock-o"></i>
+													<span>10:09 am</span>
+												</span>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+
+							<li class="dropdown-footer">
+								<a href="inbox.html">
+									See all messages
+									<i class="ace-icon fa fa-arrow-right"></i>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="light-blue dropdown-modal">
+						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+							<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+							<span class="user-info">
+								<small>Welcome,</small>
+								Jason
+							</span>
+
+							<i class="ace-icon fa fa-caret-down"></i>
+						</a>
+
+						<ul
+							class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+							<li>
+								<a href="#">
+									<i class="ace-icon fa fa-cog"></i>
+									Settings
+								</a>
+							</li>
+
+							<li>
+								<a href="profile.html">
+									<i class="ace-icon fa fa-user"></i>
+									Profile
+								</a>
+							</li>
+
+							<li class="divider"></li>
+
+							<li>
+								<a href="#">
+									<i class="ace-icon fa fa-power-off"></i>
+									Logout
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /.navbar-container -->
+	</div>
+
+	<div class="main-container ace-save-state" id="main-container">
+		<script type="text/javascript">
+			try { ace.settings.loadState('main-container') } catch (e) { }
+		</script>
 
 <div id="sidebar" class="sidebar responsive ace-save-state">
 	<script type="text/javascript">
@@ -529,965 +541,940 @@
 	</div>
 </div>
 
-			<div class="main-content">
-				<div class="main-content-inner">
-					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
-						<ul class="breadcrumb">
-							<li>
-								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Home</a>
-							</li>
+		<div class="main-content">
+			<div class="main-content-inner">
+				<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+					<ul class="breadcrumb">
+						<li>
+							<i class="ace-icon fa fa-home home-icon"></i>
+							<a href="#">Home</a>
+						</li>
 
-							<li>
-								<a href="#">Course</a>
-							</li>
-							<li class="active">Edit Course</li>
-						</ul><!-- /.breadcrumb -->
-					</div>
+						<li>
+							<a href="#">Course</a>
+						</li>
+						<li class="active">Edit Course</li>
+					</ul><!-- /.breadcrumb -->
+				</div>
 
-					<div class="page-content">
-						<div class="page-header">
-							<h1>
-								Course
-								<small>
-									<i class="ace-icon fa fa-angle-double-right"></i>
-									Edit Course
-								</small>
-							</h1>
-						</div><!-- /.page-header -->
+				<div class="page-content">
+					<div class="page-header">
+						<h1>
+							Course
+							<small>
+								<i class="ace-icon fa fa-angle-double-right"></i>
+								Edit Course
+							</small>
+						</h1>
+					</div><!-- /.page-header -->
 
-						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<div class="hr hr-18 hr-double dotted"></div>
+					<div class="row">
+						<div class="col-xs-12">
+							<!-- PAGE CONTENT BEGINS -->
+							<div class="hr hr-18 hr-double dotted"></div>
 
-								<div class="widget-box">
-									<div class="widget-header widget-header-blue widget-header-flat">
-										<h4 class="widget-title lighter">Edit a Course</h4>
+							<div class="widget-box">
+								<div class="widget-header widget-header-blue widget-header-flat">
+									<h4 class="widget-title lighter">Edit a Course</h4>
 
-										<div class="widget-toolbar">
-											<label>
-												<small class="green">
-													<b>Validation</b>
-												</small>
+									
+								</div>
 
-												<input id="skip-validation" type="checkbox" class="ace ace-switch ace-switch-4" />
-												<span class="lbl middle"></span>
-											</label>
-										</div>
-									</div>
+								<div class="widget-body">
+									<div class="widget-main">
+										<div id="fuelux-wizard-container">
+											<div>
+												<ul class="steps">
+													<li data-step="1" class="active">
+														<span class="step">1</span>
+														<span class="title">Detail</span>
+													</li>
 
-									<div class="widget-body">
-										<div class="widget-main">
-											<div id="fuelux-wizard-container">
-												<div>
-													<ul class="steps">
-														<li data-step="1" class="active">
-															<span class="step">1</span>
-															<span class="title">Detail</span>
-														</li>
+													<li data-step="2">
+														<span class="step">2</span>
+														<span class="title">Assign Teacher</span>
+													</li>
 
-														<li data-step="2">
-															<span class="step">2</span>
-															<span class="title">Assign Teacher</span>
-														</li>
+													<li data-step="3">
+														<span class="step">3</span>
+														<span class="title">Add student</span>
+													</li>
 
-														<li data-step="3">
-															<span class="step">3</span>
-															<span class="title">Add student</span>
-														</li>
+													<li data-step="4">
+														<span class="step">4</span>
+														<span class="title">Content and Image</span>
+													</li>
+												</ul>
+											</div>
 
-														<li data-step="4">
-															<span class="step">4</span>
-															<span class="title">Content and Image</span>
-														</li>
-													</ul>
-												</div>
+											<hr />
 
-												<hr />
-
-												<div class="step-content pos-rel">
-													<div class="step-pane active" data-step="1">
-														<h3 class="lighter block green">Detail</h3>
-														<div class="col-md-13" style="border: 2px solid #ddd; margin-left: 50px;">
-															<!--course name-->
-															<div class="form-group">
-															  <label for="cname">Course's name</label><br>
-															  <input
-																type="text"
-																name="cname"
-																id="cname"
-																placeholder="Enter name"
-																style="width: 100%;"
-															  />
-															</div>
-															<div class="form-group">
-																<label for="topic">Choose Topic</label><br>
-																<select
-																  class="form-select"
-																  aria-label="Default select example"
-																  name="topic"
-																  id="topic"
-																  style="width: 100%;"
-																>
-																  <option selected>Select a topic</option>
-																  <option value="1">1</option>
-																  <option value="2">2</option>
-																  <option value="3">3</option>
-																</select>
-															  </div>
-															  <div class="form-group">
-																<label for="cate">Choose Category</label><br>
-															  <select
-																class="form-select"
-																aria-label=""
-																name="cate"
-																id="cate"
-																style="width: 100%;"
-															  >
+											<div class="step-content pos-rel">
+												<div class="step-pane active" data-step="1">
+													<h3 class="lighter block green">Detail</h3>
+													<div class="row">
+														<div class="col-md-13"
+														style="border: 2px solid #ddd; margin-left: 50px;">
+														<!--course name-->
+														<div class="form-group">
+															<label for="cname">Course's name</label><br>
+															<input type="text" name="cname" id="cname"
+																placeholder="Enter name" style="width: 100%;" />
+														</div>
+														<div class="form-group">
+															<label for="topic">Choose Topic</label><br>
+															<select class="form-select"
+																aria-label="Default select example" name="topic"
+																id="topic" style="width: 100%;">
+																<option selected>Select a topic</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+																<option value="3">3</option>
+															</select>
+														</div>
+														<div class="form-group">
+															<label for="cate">Choose Category</label><br>
+															<select class="form-select" aria-label="" name="cate"
+																id="cate" style="width: 100%;">
 																<option selected>Select a category</option>
 																<option value="1">1</option>
 																<option value="2">2</option>
 																<option value="3">3</option>
-															  </select>
-															</div>
-															<div class="form-group">
-																<label for="code">Enroll Code</label>
-																<input
-																  type="text"
-																  name="code"
-																  id="code"
-																  placeholder="Enter code"
-																  style="width: 100%;"
-																/>
-															</div>
-															<!--schedule-->
-															<div class="form-group">
-																<label for="id-date-range-picker-1">Schedule</label>
-									  
-																<div class="row">
-																  <div class="col-xs-8 col-sm-11">
-																	<div class="input-group">
-																	  <span class="input-group-addon">
-																		<i class="fa fa-calendar bigger-110"></i>
-																	  </span>
-									  
-																	  <input
-																		class="form-control"
-																		type="text"
-																		name="daterange"
-																		id=""
-																	  />
-																	</div>
-																  </div>
-																</div>
-															  </div>
+															</select>
 														</div>
-																																										
+														<div class="form-group">
+															<label for="code">Enroll Code</label>
+															<input type="text" name="code" id="code"
+																placeholder="Enter code" style="width: 100%;" />							
+														</div>
+														<!--schedule-->
+														<div class="form-group">
+															<label for="id-date-range-picker-1">Schedule</label>
+
+															<div class="row">
+																<div class="col-xs-8 col-sm-11">
+																	<div class="input-group">
+																		<span class="input-group-addon">
+																			<i class="fa fa-calendar bigger-110"></i>
+																		</span>
+
+																		<input class="form-control" type="text"
+																			name="daterange" id="" value="01/01/2018 - 01/15/2018" />
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 													</div>
 													
-													
-													
 
-													<div class="step-pane" data-step="2">
-														<h3 class="lighter block green">Assign Teacher</h3>
-														<div class="form-group" id="teacher" style="border: 1px solid #ddd;margin-left: 50px;">
-															<br>
-															<label>&ensp;&ensp;Search</label>
-															<input type="text" id="search" onkeyup="Search()"
+												</div>
+												<div class="step-pane" data-step="2">
+													<h3 class="lighter block green">Assign Teacher</h3>
+													<div class="form-group" id="teacher"
+														style="border: 1px solid #ddd;margin-left: 50px;">
+														<br>
+														<label>&ensp;&ensp;Search</label>
+														<input type="text" id="search" onkeyup="Search()"
 															placeholder="Enter to search " /></br></br>
-															  
-															<div id="scroll">
-																<table style="cursor: pointer;margin-left: 5px;" id="tableData" class="table table-borderless table-hover" class="table table-borderless table-hover">
-																
-																	<thead >
-																		<th>Name</th>
-																		<th>Email</th>
-																	</thead>
-																	<tbody >
-																		<tr>
+
+														<div id="scroll">
+															<table style="cursor: pointer;margin-left: 5px;"
+																id="tableData"
+																class="table table-borderless table-hover"
+																class="table table-borderless table-hover">
+
+																<thead>
+																	<th>Name</th>
+																	<th>Email</th>
+																</thead>
+																<tbody>
+																	<tr>
 																		<td>teacher 1</td>
 																		<td>teacher1@gmail.com</td>
-																		</tr>
-																		<tr>
+																	</tr>
+																	<tr>
 																		<td>teacher 2</td>
 																		<td>teacher2@gmail.com</td>
-																		</tr>
-																		<tr>
+																	</tr>
+																	<tr>
 																		<td>teacher 3</td>
 																		<td>teacher3@gmail.com</td>
-																		</tr>
-																		<tr>
+																	</tr>
+																	<tr>
 																		<td>teacher 4</td>
 																		<td>teacher4@gmail.com</td>
-																		</tr>
-																		<tr>
+																	</tr>
+																	<tr>
 																		<td>teacher 4</td>
 																		<td>teacher4@gmail.com</td>
-																		</tr>
-																		<tr>
+																	</tr>
+																	<tr>
 																		<td>teacher 4</td>
 																		<td>teacher4@gmail.com</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</div>
-															<label>&ensp;&ensp;Current teacher</label>
-															<table class="table table-borderless" id="teacher">
-															  <thead>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<label>&ensp;&ensp;Current teacher</label>
+														<table class="table table-borderless" id="teacher1">
+															<thead>
+																<th></th>
 																<th>Name</th>
 																<th>Email</th>
-															  </thead>
-															  <tbody>
+															</thead>
+															<tbody id="bodyt">
 																<tr id="row">
-																  <td id="name">teacher 5</td>
-																  <td id="email">teacher@gmail.com</td>
+																	<td><input type='checkbox' name='record'></td>
+																	<td id="name">teacher 5</td>
+																	<td id="email">teacher@gmail.com</td>
 																</tr>
-															  </tbody>
-															</table>
-														</div>																																																								
+															</tbody>
+														</table>
+														<input type="button" class="btn btn-white btn-default btn-round delete-row"  value="Delete">
+                           
+                        </input>
 													</div>
+												</div>
 
-													<div class="step-pane" data-step="3">
-														<h3 class="lighter block green">Add Student</h3>
-														<label>Student list</label>
-														<label class="col-sm-6 control-label no-padding-top"> 
-															Assigned Student
-														</label>
-														<div class="col-sm-12">
-															<select
-															  multiple="multiple"
-															  size="15"
-															  name="duallistbox_demo1[]"
-															  id="duallist"
-															>
-															  <option value="option1">Option 1</option>
-															  <option value="option2">Option 2</option>
-															  <option value="option3" selected="selected">
+												<div class="step-pane" data-step="3">
+													<h3 class="lighter block green">Add Student</h3>
+													<label>Student list</label>
+													<label class="col-sm-6 control-label no-padding-top">
+														Assigned Student
+													</label>
+													<div class="col-sm-12">
+														<select multiple="multiple" size="15" name="duallistbox_demo1[]"
+															id="duallist">
+															<option value="option1">Option 1</option>
+															<option value="option2">Option 2</option>
+															<option value="option3" selected="selected">
 																Option 3
-															  </option>
-															  <option value="option4">Option 4</option>
-															  <option value="option5">Option 5</option>
-															  <option value="option6" selected="selected">
+															</option>
+															<option value="option4">Option 4</option>
+															<option value="option5">Option 5</option>
+															<option value="option6" selected="selected">
 																Option 6
-															  </option>
-															  <option value="option7">Option 7</option>
-															  <option value="option8">Option 8</option>
-															  <option value="option9">Option 9</option>
-															  <option value="option0">Option 10</option>
-															</select>
-														  </div>
-													</div>
-													<div class="step-pane" data-step="4">
-														
-														<br>
-														<div class="form-group">
-															<h3 class="lighter block green">Description</h3>
-															<textarea name="" id="" cols="166" rows="10" style="margin-left: 13px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque hic, earum natus perferendis, quibusdam culpa pariatur itaque nobis mollitia, nisi illum voluptatem vel eius ut sit tempore laudantium magni quod?</textarea>
-															
-														</div>
-														<h3 class="lighter block green">Image</h3>
-		<!-- DropZone -->
-          <div class="row">
-            <div class="col-xs-12">
-              <!-- PAGE CONTENT BEGINS -->
-
-              <div class="col-xs-12">
-                <div class="col-xs-12" style="border: 5px solid #ddd">
-                  <br />
-                  <div class="col-xs-12">
-                    <form
-                      action="./dummy.html"
-                      class="dropzone well"
-                      id="dropzone"
-                    >
-                      <div class="fallback">
-                        <input name="file" type="file" multiple="" />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-
-              <div id="preview-template" class="hide">
-                <div class="dz-preview dz-file-preview">
-                  <div class="dz-image">
-                    <img data-dz-thumbnail="" />
-                  </div>
-
-                  <div class="dz-details">
-                    <div class="dz-size">
-                      <span data-dz-size=""></span>
-                    </div>
-
-                    <div class="dz-filename">
-                      <span data-dz-name=""></span>
-                    </div>
-                  </div>
-
-                  <div class="dz-progress">
-                    <span class="dz-upload" data-dz-uploadprogress=""></span>
-                  </div>
-
-                  <div class="dz-error-message">
-                    <span data-dz-errormessage=""></span>
-                  </div>
-
-                  <div class="dz-success-mark">
-                    <span class="fa-stack fa-lg bigger-150">
-                      <i class="fa fa-circle fa-stack-2x white"></i>
-
-                      <i class="fa fa-check fa-stack-1x fa-inverse green"></i>
-                    </span>
-                  </div>
-
-                  <div class="dz-error-mark">
-                    <span class="fa-stack fa-lg bigger-150">
-                      <i class="fa fa-circle fa-stack-2x white"></i>
-
-                      <i class="fa fa-remove fa-stack-1x fa-inverse red"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- PAGE CONTENT ENDS -->
-            </div>
-            <div id="preview-template" class="hide">
-              <div class="dz-preview dz-file-preview">
-                <div class="dz-image">
-                  <img data-dz-thumbnail="" />
-                </div>
-
-                <div class="dz-details">
-                  <div class="dz-size">
-                    <span data-dz-size=""></span>
-                  </div>
-
-                  <div class="dz-filename">
-                    <span data-dz-name=""></span>
-                  </div>
-                </div>
-
-                <div class="dz-progress">
-                  <span class="dz-upload" data-dz-uploadprogress=""></span>
-                </div>
-
-                <div class="dz-error-message">
-                  <span data-dz-errormessage=""></span>
-                </div>
-
-                <div class="dz-success-mark">
-                  <span class="fa-stack fa-lg bigger-150">
-                    <i class="fa fa-circle fa-stack-2x white"></i>
-
-                    <i class="fa fa-check fa-stack-1x fa-inverse green"></i>
-                  </span>
-                </div>
-
-                <div class="dz-error-mark">
-                  <span class="fa-stack fa-lg bigger-150">
-                    <i class="fa fa-circle fa-stack-2x white"></i>
-
-                    <i class="fa fa-remove fa-stack-1x fa-inverse red"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <!-- /.col -->
-          </div>
-          <br />
-        <!-- End of DropZone-->
+															</option>
+															<option value="option7">Option 7</option>
+															<option value="option8">Option 8</option>
+															<option value="option9">Option 9</option>
+															<option value="option0">Option 10</option>
+														</select>
 													</div>
 												</div>
-											</div>
+												<div class="step-pane" data-step="4">
 
-											<hr />
-											
-											<div class="wizard-actions">
-												<button class="btn btn-prev">
-													<i class="ace-icon fa fa-arrow-left"></i>
-													Prev
-												</button>
+													<br>
+													<div class="form-group">
+														<h3 class="lighter block green">Description</h3>
+														<textarea name="" id="" cols="166" rows="10"
+															style="margin-left: 13px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque hic, earum natus perferendis, quibusdam culpa pariatur itaque nobis mollitia, nisi illum voluptatem vel eius ut sit tempore laudantium magni quod?</textarea>
 
-												<button class="btn btn-success btn-next" data-last="Finish">
-													Next
-													<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
-												</button>
-											</div>
-										</div><!-- /.widget-main -->
-									</div><!-- /.widget-body -->
-								</div>
+													</div>
+													<h3 class="lighter block green">Image</h3>
+													<!-- DropZone -->
+													<div class="row">
+														<div class="col-xs-12">
+															<!-- PAGE CONTENT BEGINS -->
 
-								<div id="modal-wizard" class="modal">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div id="modal-wizard-container">
-												<div class="modal-header">
-													<ul class="steps">
-														<li data-step="1" class="active">
-															<span class="step">1</span>
-															<span class="title">Validation states</span>
-														</li>
+															<div class="col-xs-12">
+																<div class="col-xs-12" style="border: 5px solid #ddd">
+																	<br />
+																	<div class="col-xs-12">
+																		<form action="./dummy.html"
+																			class="dropzone well" id="dropzone">
+																			<div class="fallback">
+																				<input name="file" type="file"
+																					multiple="" />
+																			</div>
+																		</form>
+																	</div>
+																</div>
+															</div>
 
-														<li data-step="2">
-															<span class="step">2</span>
-															<span class="title">Alerts</span>
-														</li>
+															<div id="preview-template" class="hide">
+																<div class="dz-preview dz-file-preview">
+																	<div class="dz-image">
+																		<img data-dz-thumbnail="" />
+																	</div>
 
-														<li data-step="3">
-															<span class="step">3</span>
-															<span class="title">Payment Info</span>
-														</li>
+																	<div class="dz-details">
+																		<div class="dz-size">
+																			<span data-dz-size=""></span>
+																		</div>
 
-														<li data-step="4">
-															<span class="step">4</span>
-															<span class="title">Other Info</span>
-														</li>
-													</ul>
+																		<div class="dz-filename">
+																			<span data-dz-name=""></span>
+																		</div>
+																	</div>
+
+																	<div class="dz-progress">
+																		<span class="dz-upload"
+																			data-dz-uploadprogress=""></span>
+																	</div>
+
+																	<div class="dz-error-message">
+																		<span data-dz-errormessage=""></span>
+																	</div>
+
+																	<div class="dz-success-mark">
+																		<span class="fa-stack fa-lg bigger-150">
+																			<i
+																				class="fa fa-circle fa-stack-2x white"></i>
+
+																			<i
+																				class="fa fa-check fa-stack-1x fa-inverse green"></i>
+																		</span>
+																	</div>
+
+																	<div class="dz-error-mark">
+																		<span class="fa-stack fa-lg bigger-150">
+																			<i
+																				class="fa fa-circle fa-stack-2x white"></i>
+
+																			<i
+																				class="fa fa-remove fa-stack-1x fa-inverse red"></i>
+																		</span>
+																	</div>
+																</div>
+															</div>
+															<!-- PAGE CONTENT ENDS -->
+														</div>
+														<div id="preview-template" class="hide">
+															<div class="dz-preview dz-file-preview">
+																<div class="dz-image">
+																	<img data-dz-thumbnail="" />
+																</div>
+
+																<div class="dz-details">
+																	<div class="dz-size">
+																		<span data-dz-size=""></span>
+																	</div>
+
+																	<div class="dz-filename">
+																		<span data-dz-name=""></span>
+																	</div>
+																</div>
+
+																<div class="dz-progress">
+																	<span class="dz-upload"
+																		data-dz-uploadprogress=""></span>
+																</div>
+
+																<div class="dz-error-message">
+																	<span data-dz-errormessage=""></span>
+																</div>
+
+																<div class="dz-success-mark">
+																	<span class="fa-stack fa-lg bigger-150">
+																		<i class="fa fa-circle fa-stack-2x white"></i>
+
+																		<i
+																			class="fa fa-check fa-stack-1x fa-inverse green"></i>
+																	</span>
+																</div>
+
+																<div class="dz-error-mark">
+																	<span class="fa-stack fa-lg bigger-150">
+																		<i class="fa fa-circle fa-stack-2x white"></i>
+
+																		<i
+																			class="fa fa-remove fa-stack-1x fa-inverse red"></i>
+																	</span>
+																</div>
+															</div>
+														</div>
+														<!-- /.col -->
+													</div>
+													<br />
+													<!-- End of DropZone-->
 												</div>
-
-												<div class="modal-body step-content">
-													<div class="step-pane active" data-step="1">
-														<div class="center">
-															<h4 class="blue">Step 1</h4>
-														</div>
-													</div>
-
-													<div class="step-pane" data-step="2">
-														<div class="center">
-															<h4 class="blue">Step 2</h4>
-														</div>
-													</div>
-
-													<div class="step-pane" data-step="3">
-														<div class="center">
-															<h4 class="blue">Step 3</h4>
-														</div>
-													</div>
-
-													<div class="step-pane" data-step="4">
-														<div class="center">
-															<h4 class="blue">Step 4</h4>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="modal-footer wizard-actions">
-												<button class="btn btn-sm btn-prev">
-													<i class="ace-icon fa fa-arrow-left"></i>
-													Prev
-												</button>
-
-												<button class="btn btn-success btn-sm btn-next" data-last="Finish">
-													Next
-													<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
-												</button>
-
-												<button class="btn btn-danger btn-sm pull-left" data-dismiss="modal">
-													<i class="ace-icon fa fa-times"></i>
-													Cancel
-												</button>
 											</div>
 										</div>
+										<hr />
+
+										<div class="wizard-actions">
+											<button class="btn btn-prev">
+												<i class="ace-icon fa fa-arrow-left"></i>
+												Prev
+											</button>
+
+											<button class="btn btn-success btn-next" data-last="Finish">
+												Next
+												<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+											</button>
+										</div>
+									</div><!-- /.widget-main -->
+								</div><!-- /.widget-body -->
+							</div>
+
+							<div id="modal-wizard" class="modal">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div id="modal-wizard-container">
+											<div class="modal-header">
+												<ul class="steps">
+													<li data-step="1" class="active">
+														<span class="step">1</span>
+														<span class="title">Validation states</span>
+													</li>
+
+													<li data-step="2">
+														<span class="step">2</span>
+														<span class="title">Alerts</span>
+													</li>
+
+													<li data-step="3">
+														<span class="step">3</span>
+														<span class="title">Payment Info</span>
+													</li>
+
+													<li data-step="4">
+														<span class="step">4</span>
+														<span class="title">Other Info</span>
+													</li>
+												</ul>
+											</div>
+
+											<div class="modal-body step-content">
+												<div class="step-pane active" data-step="1">
+													<div class="center">
+														<h4 class="blue">Step 1</h4>
+													</div>
+												</div>
+
+												<div class="step-pane" data-step="2">
+													<div class="center">
+														<h4 class="blue">Step 2</h4>
+													</div>
+												</div>
+
+												<div class="step-pane" data-step="3">
+													<div class="center">
+														<h4 class="blue">Step 3</h4>
+													</div>
+												</div>
+
+												<div class="step-pane" data-step="4">
+													<div class="center">
+														<h4 class="blue">Step 4</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="modal-footer wizard-actions">
+											<button class="btn btn-sm btn-prev">
+												<i class="ace-icon fa fa-arrow-left"></i>
+												Prev
+											</button>
+
+											<button class="btn btn-success btn-sm btn-next" data-last="Finish">
+												Next
+												<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+											</button>
+
+											<button class="btn btn-danger btn-sm pull-left" data-dismiss="modal">
+												<i class="ace-icon fa fa-times"></i>
+												Cancel
+											</button>
+										</div>
 									</div>
-								</div><!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.page-content -->
-				</div>
-			</div><!-- /.main-content -->
+								</div>
+							</div><!-- PAGE CONTENT ENDS -->
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.page-content -->
+			</div>
+		</div><!-- /.main-content -->
 
-			<div class="footer">
-				<div class="footer-inner">
-					<div class="footer-content">
-						<span class="bigger-120">
-							<span class="blue bolder">@</span>
-							fptlearning
-						  </span>
+		<div class="footer">
+			<div class="footer-inner">
+				<div class="footer-content">
+					<span class="bigger-120">
+						<span class="blue bolder">@</span>
+						fptlearning
+					</span>
 
-						&nbsp; &nbsp;
-						<span class="action-buttons">
-							<a href="#">
-								<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-							</a>
+					&nbsp; &nbsp;
+					<span class="action-buttons">
+						<a href="#">
+							<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+						</a>
 
-							<a href="#">
-								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
-							</a>
+						<a href="#">
+							<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+						</a>
 
-							<a href="#">
-								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
-							</a>
-						</span>
-					</div>
+						<a href="#">
+							<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+						</a>
+					</span>
 				</div>
 			</div>
+		</div>
 
-			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-			</a>
-		</div><!-- /.main-container -->
+		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+			<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+		</a>
+	</div><!-- /.main-container -->
 
-		<!-- basic scripts -->
+	<!-- basic scripts -->
 
-		<!--[if !IE]> -->
-		<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<!--[if !IE]> -->
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
 
-		<!-- <![endif]-->
+	<!-- <![endif]-->
 
-		<!--[if IE]>
+	<!--[if IE]>
 <script src="assets/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
-		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
-		</script>
-		<script src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+	</script>
+	<script src="assets/js/bootstrap.min.js"></script>
 
 
-		<!-- page specific plugin scripts -->
-		<script src="assets/js/wizard.min.js"></script>
-		<script src="assets/js/jquery.validate.min.js"></script>
-		<script src="assets/js/jquery-additional-methods.min.js"></script>
-		<script src="assets/js/bootbox.js"></script>
-		<script src="assets/js/jquery.maskedinput.min.js"></script>
-		<script src="assets/js/select2.min.js"></script>
+	<!-- page specific plugin scripts -->
+	<script src="assets/js/wizard.min.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+	<script src="assets/js/jquery-additional-methods.min.js"></script>
+	<script src="assets/js/bootbox.js"></script>
+	<script src="assets/js/jquery.maskedinput.min.js"></script>
+	<script src="assets/js/select2.min.js"></script>
 
-		<!-- ace scripts -->
-		<script src="assets/js/ace-elements.min.js"></script>
-		<script src="assets/js/ace.min.js"></script>
-		<script src="assets/js/teacher.js"></script>
-		<script src="assets/js/dropzone.min.js"></script>
-		
-    <!--DropZone using JS-->
-    <script type="text/javascript">
-      jQuery(function ($) {
-        try {
-          Dropzone.autoDiscover = false;
+	<!-- ace scripts -->
+	<script src="assets/js/ace-elements.min.js"></script>
+	<script src="assets/js/ace.min.js"></script>
+	<script src="assets/js/teacher.js"></script>
+	<script src="assets/js/dropzone.min.js"></script>
 
-          var myDropzone = new Dropzone("#dropzone", {
-            previewTemplate: $("#preview-template").html(),
+	<!--DropZone using JS-->
+	<script type="text/javascript">
+		jQuery(function ($) {
+			try {
+				Dropzone.autoDiscover = false;
 
-            thumbnailHeight: 120,
-            thumbnailWidth: 120,
-            maxFilesize: 0.5,
+				var myDropzone = new Dropzone("#dropzone", {
+					previewTemplate: $("#preview-template").html(),
 
-            //addRemoveLinks : true,
-            //dictRemoveFile: 'Remove',
+					thumbnailHeight: 120,
+					thumbnailWidth: 120,
+					maxFilesize: 0.5,
 
-            dictDefaultMessage:
-              '<span class="bigger-150 bolder"><i class="ace-icon fa fa-caret-right red"></i> Drop files</span> to upload \
+					//addRemoveLinks : true,
+					//dictRemoveFile: 'Remove',
+
+					dictDefaultMessage:
+						'<span class="bigger-150 bolder"><i class="ace-icon fa fa-caret-right red"></i> Drop files</span> to upload \
 				<span class="smaller-80 grey">(or click)</span> <br /> \
 				<i class="upload-icon ace-icon fa fa-cloud-upload blue fa-3x"></i>',
-            thumbnail: function (file, dataUrl) {
-              if (file.previewElement) {
-                $(file.previewElement).removeClass("dz-file-preview");
-                var images = $(file.previewElement)
-                  .find("[data-dz-thumbnail]")
-                  .each(function () {
-                    var thumbnailElement = this;
-                    thumbnailElement.alt = file.name;
-                    thumbnailElement.src = dataUrl;
-                  });
-                setTimeout(function () {
-                  $(file.previewElement).addClass("dz-image-preview");
-                }, 1);
-              }
-            },
-          });
+					thumbnail: function (file, dataUrl) {
+						if (file.previewElement) {
+							$(file.previewElement).removeClass("dz-file-preview");
+							var images = $(file.previewElement)
+								.find("[data-dz-thumbnail]")
+								.each(function () {
+									var thumbnailElement = this;
+									thumbnailElement.alt = file.name;
+									thumbnailElement.src = dataUrl;
+								});
+							setTimeout(function () {
+								$(file.previewElement).addClass("dz-image-preview");
+							}, 1);
+						}
+					},
+				});
 
-          //simulating upload progress
-          var minSteps = 6,
-            maxSteps = 60,
-            timeBetweenSteps = 100,
-            bytesPerStep = 100000;
+				//simulating upload progress
+				var minSteps = 6,
+					maxSteps = 60,
+					timeBetweenSteps = 100,
+					bytesPerStep = 100000;
 
-          myDropzone.uploadFiles = function (files) {
-            var self = this;
+				myDropzone.uploadFiles = function (files) {
+					var self = this;
 
-            for (var i = 0; i < files.length; i++) {
-              var file = files[i];
-              totalSteps = Math.round(
-                Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep))
-              );
+					for (var i = 0; i < files.length; i++) {
+						var file = files[i];
+						totalSteps = Math.round(
+							Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep))
+						);
 
-              for (var step = 0; step < totalSteps; step++) {
-                var duration = timeBetweenSteps * (step + 1);
-                setTimeout(
-                  (function (file, totalSteps, step) {
-                    return function () {
-                      file.upload = {
-                        progress: (100 * (step + 1)) / totalSteps,
-                        total: file.size,
-                        bytesSent: ((step + 1) * file.size) / totalSteps,
-                      };
+						for (var step = 0; step < totalSteps; step++) {
+							var duration = timeBetweenSteps * (step + 1);
+							setTimeout(
+								(function (file, totalSteps, step) {
+									return function () {
+										file.upload = {
+											progress: (100 * (step + 1)) / totalSteps,
+											total: file.size,
+											bytesSent: ((step + 1) * file.size) / totalSteps,
+										};
 
-                      self.emit(
-                        "uploadprogress",
-                        file,
-                        file.upload.progress,
-                        file.upload.bytesSent
-                      );
-                      if (file.upload.progress == 100) {
-                        file.status = Dropzone.SUCCESS;
-                        self.emit("success", file, "success", null);
-                        self.emit("complete", file);
-                        self.processQueue();
-                      }
-                    };
-                  })(file, totalSteps, step),
-                  duration
-                );
-              }
-            }
-          };
+										self.emit(
+											"uploadprogress",
+											file,
+											file.upload.progress,
+											file.upload.bytesSent
+										);
+										if (file.upload.progress == 100) {
+											file.status = Dropzone.SUCCESS;
+											self.emit("success", file, "success", null);
+											self.emit("complete", file);
+											self.processQueue();
+										}
+									};
+								})(file, totalSteps, step),
+								duration
+							);
+						}
+					}
+				};
 
-          //remove dropzone instance when leaving this page in ajax mode
-          $(document).one("ajaxloadstart.page", function (e) {
-            try {
-              myDropzone.destroy();
-            } catch (e) {}
-          });
-        } catch (e) {
-          alert("Dropzone.js does not support older browsers!");
-        }
-      });
-    </script>
-    <!--End of DropZone-->
+				//remove dropzone instance when leaving this page in ajax mode
+				$(document).one("ajaxloadstart.page", function (e) {
+					try {
+						myDropzone.destroy();
+					} catch (e) { }
+				});
+			} catch (e) {
+				alert("Dropzone.js does not support older browsers!");
+			}
+		});
+	</script>
+	<!--End of DropZone-->
 
-		
-		<!-- inline scripts related to this page -->
-		<script type="text/javascript">
-			jQuery(function($) {
-			
-				$('[data-rel=tooltip]').tooltip();
-			
-				$('.select2').css('width','200px').select2({allowClear:true})
-				.on('change', function(){
+
+	<!-- inline scripts related to this page -->
+	<script type="text/javascript">
+		jQuery(function ($) {
+
+			$('[data-rel=tooltip]').tooltip();
+
+			$('.select2').css('width', '200px').select2({ allowClear: true })
+				.on('change', function () {
 					$(this).closest('form').validate().element($(this));
-				}); 
-			
-			
-				var $validation = false;
-				$('#fuelux-wizard-container')
+				});
+
+
+			var $validation = false;
+			$('#fuelux-wizard-container')
 				.ace_wizard({
 					//step: 2 //optional argument. wizard will jump to step "2" at first
 					//buttons: '.wizard-actions:eq(0)'
 				})
-				.on('actionclicked.fu.wizard' , function(e, info){
-					if(info.step == 1 && $validation) {
-						if(!$('#validation-form').valid()) e.preventDefault();
+				.on('actionclicked.fu.wizard', function (e, info) {
+					if (info.step == 1 && $validation) {
+						if (!$('#validation-form').valid()) e.preventDefault();
 					}
 				})
 				//.on('changed.fu.wizard', function() {
 				//})
-				.on('finished.fu.wizard', function(e) {
+				.on('finished.fu.wizard', function (e) {
 					bootbox.dialog({
-						message: "Thank you! Your information was successfully saved!", 
+						message: "Thank you! Your information was successfully saved!",
 						buttons: {
-							"success" : {
-								"label" : "OK",
-								"className" : "btn-sm btn-primary"
+							"success": {
+								"label": "OK",
+								"className": "btn-sm btn-primary"
 							}
 						}
 					});
-				}).on('stepclick.fu.wizard', function(e){
+				}).on('stepclick.fu.wizard', function (e) {
 					//e.preventDefault();//this will prevent clicking and selecting steps
 				});
-			
-			
-				//jump to a step
-				/**
-				var wizard = $('#fuelux-wizard-container').data('fu.wizard')
-				wizard.currentStep = 3;
-				wizard.setState();
-				*/
-			
-				//determine selected step
-				//wizard.selectedItem().step
-			
-			
-			
-				//hide or show the other form which requires validation
-				//this is for demo only, you usullay want just one form in your application
-				$('#skip-validation').removeAttr('checked').on('click', function(){
-					$validation = this.checked;
-					if(this.checked) {
-						$('#sample-form').hide();
-						$('#validation-form').removeClass('hide');
-					}
-					else {
-						$('#validation-form').addClass('hide');
-						$('#sample-form').show();
-					}
-				})
-			
-			
-			
-				//documentation : http://docs.jquery.com/Plugins/Validation/validate
-			
-			
-				$.mask.definitions['~']='[+-]';
-				$('#phone').mask('(999) 999-9999');
-			
-				jQuery.validator.addMethod("phone", function (value, element) {
-					return this.optional(element) || /^\(\d{3}\) \d{3}\-\d{4}( x\d{1,6})?$/.test(value);
-				}, "Enter a valid phone number.");
-			
-				$('#validation-form').validate({
-					errorElement: 'div',
-					errorClass: 'help-block',
-					focusInvalid: false,
-					ignore: "",
-					rules: {
-						email: {
-							required: true,
-							email:true
-						},
-						password: {
-							required: true,
-							minlength: 5
-						},
-						password2: {
-							required: true,
-							minlength: 5,
-							equalTo: "#password"
-						},
-						name: {
-							required: true
-						},
-						phone: {
-							required: true,
-							phone: 'required'
-						},
-						url: {
-							required: true,
-							url: true
-						},
-						comment: {
-							required: true
-						},
-						state: {
-							required: true
-						},
-						platform: {
-							required: true
-						},
-						subscription: {
-							required: true
-						},
-						gender: {
-							required: true,
-						},
-						agree: {
-							required: true,
-						}
-					},
-			
-					messages: {
-						email: {
-							required: "Please provide a valid email.",
-							email: "Please provide a valid email."
-						},
-						password: {
-							required: "Please specify a password.",
-							minlength: "Please specify a secure password."
-						},
-						state: "Please choose state",
-						subscription: "Please choose at least one option",
-						gender: "Please choose gender",
-						agree: "Please accept our policy"
-					},
-			
-			
-					highlight: function (e) {
-						$(e).closest('.form-group').removeClass('has-info').addClass('has-error');
-					},
-			
-					success: function (e) {
-						$(e).closest('.form-group').removeClass('has-error');//.addClass('has-info');
-						$(e).remove();
-					},
-			
-					errorPlacement: function (error, element) {
-						if(element.is('input[type=checkbox]') || element.is('input[type=radio]')) {
-							var controls = element.closest('div[class*="col-"]');
-							if(controls.find(':checkbox,:radio').length > 1) controls.append(error);
-							else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
-						}
-						else if(element.is('.select2')) {
-							error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
-						}
-						else if(element.is('.chosen-select')) {
-							error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
-						}
-						else error.insertAfter(element.parent());
-					},
-			
-					submitHandler: function (form) {
-					},
-					invalidHandler: function (form) {
-					}
-				});
-			
-				
-				
-				
-				$('#modal-wizard-container').ace_wizard();
-				$('#modal-wizard .wizard-actions .btn[data-dismiss=modal]').removeAttr('disabled');
-				
-				
-				/**
-				$('#date').datepicker({autoclose:true}).on('changeDate', function(ev) {
-					$(this).closest('form').validate().element($(this));
-				});
-				
-				$('#mychosen').chosen().on('change', function(ev) {
-					$(this).closest('form').validate().element($(this));
-				});
-				*/
-				
-				
-				$(document).one('ajaxloadstart.page', function(e) {
-					//in ajax mode, remove remaining elements before leaving page
-					$('[class*=select2]').remove();
-				});
+
+
+			//jump to a step
+			/**
+			var wizard = $('#fuelux-wizard-container').data('fu.wizard')
+			wizard.currentStep = 3;
+			wizard.setState();
+			*/
+
+			//determine selected step
+			//wizard.selectedItem().step
+
+
+
+			//hide or show the other form which requires validation
+			//this is for demo only, you usullay want just one form in your application
+			$('#skip-validation').removeAttr('checked').on('click', function () {
+				$validation = this.checked;
+				if (this.checked) {
+					$('#sample-form').hide();
+					$('#validation-form').removeClass('hide');
+				}
+				else {
+					$('#validation-form').addClass('hide');
+					$('#sample-form').show();
+				}
 			})
-		</script>
-		<script type="text/javascript">
-			if ("ontouchstart" in document.documentElement)
-			  document.write(
+
+
+
+			//documentation : http://docs.jquery.com/Plugins/Validation/validate
+
+
+			$.mask.definitions['~'] = '[+-]';
+			$('#phone').mask('(999) 999-9999');
+
+			jQuery.validator.addMethod("phone", function (value, element) {
+				return this.optional(element) || /^\(\d{3}\) \d{3}\-\d{4}( x\d{1,6})?$/.test(value);
+			}, "Enter a valid phone number.");
+
+			$('#validation-form').validate({
+				errorElement: 'div',
+				errorClass: 'help-block',
+				focusInvalid: false,
+				ignore: "",
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+					password: {
+						required: true,
+						minlength: 5
+					},
+					password2: {
+						required: true,
+						minlength: 5,
+						equalTo: "#password"
+					},
+					name: {
+						required: true
+					},
+					phone: {
+						required: true,
+						phone: 'required'
+					},
+					url: {
+						required: true,
+						url: true
+					},
+					comment: {
+						required: true
+					},
+					state: {
+						required: true
+					},
+					platform: {
+						required: true
+					},
+					subscription: {
+						required: true
+					},
+					gender: {
+						required: true,
+					},
+					agree: {
+						required: true,
+					}
+				},
+
+				messages: {
+					email: {
+						required: "Please provide a valid email.",
+						email: "Please provide a valid email."
+					},
+					password: {
+						required: "Please specify a password.",
+						minlength: "Please specify a secure password."
+					},
+					state: "Please choose state",
+					subscription: "Please choose at least one option",
+					gender: "Please choose gender",
+					agree: "Please accept our policy"
+				},
+
+
+				highlight: function (e) {
+					$(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+				},
+
+				success: function (e) {
+					$(e).closest('.form-group').removeClass('has-error');//.addClass('has-info');
+					$(e).remove();
+				},
+
+				errorPlacement: function (error, element) {
+					if (element.is('input[type=checkbox]') || element.is('input[type=radio]')) {
+						var controls = element.closest('div[class*="col-"]');
+						if (controls.find(':checkbox,:radio').length > 1) controls.append(error);
+						else error.insertAfter(element.nextAll('.lbl:eq(0)').eq(0));
+					}
+					else if (element.is('.select2')) {
+						error.insertAfter(element.siblings('[class*="select2-container"]:eq(0)'));
+					}
+					else if (element.is('.chosen-select')) {
+						error.insertAfter(element.siblings('[class*="chosen-container"]:eq(0)'));
+					}
+					else error.insertAfter(element.parent());
+				},
+
+				submitHandler: function (form) {
+				},
+				invalidHandler: function (form) {
+				}
+			});
+
+
+
+
+			$('#modal-wizard-container').ace_wizard();
+			$('#modal-wizard .wizard-actions .btn[data-dismiss=modal]').removeAttr('disabled');
+
+
+			/**
+			$('#date').datepicker({autoclose:true}).on('changeDate', function(ev) {
+				$(this).closest('form').validate().element($(this));
+			});
+			
+			$('#mychosen').chosen().on('change', function(ev) {
+				$(this).closest('form').validate().element($(this));
+			});
+			*/
+
+
+			$(document).one('ajaxloadstart.page', function (e) {
+				//in ajax mode, remove remaining elements before leaving page
+				$('[class*=select2]').remove();
+			});
+		})
+	</script>
+	<script type="text/javascript">
+		if ("ontouchstart" in document.documentElement)
+			document.write(
 				"<script src='assets/js/jquery.mobile.custom.min.js'>" +
-				  "<" +
-				  "/script>"
-			  );
-	  
-			//datepicker plugin
-			//link
-			$(".date-picker")
-			  .datepicker({
+				"<" +
+				"/script>"
+			);
+
+		//datepicker plugin
+		//link
+		$(".date-picker")
+			.datepicker({
 				autoclose: true,
 				todayHighlight: true,
-			  })
-			  //show datepicker when clicking on the icon
-			  .next()
-			  .on(ace.click_event, function () {
+			})
+			//show datepicker when clicking on the icon
+			.next()
+			.on(ace.click_event, function () {
 				$(this).prev().focus();
-			  });
-	  
-			//or change it into a date range picker
-			$(".input-daterange").datepicker({ autoclose: true });
-	  
-			//to translate the daterange picker, please copy the "examples/daterange-fr.js" contents here before initialization
-			$("input[name=date-range-picker]")
-			  .daterangepicker({
+			});
+
+		//or change it into a date range picker
+		$(".input-daterange").datepicker({ autoclose: true });
+
+		//to translate the daterange picker, please copy the "examples/daterange-fr.js" contents here before initialization
+		$("input[name=date-range-picker]")
+			.daterangepicker({
 				applyClass: "btn-sm btn-success",
 				cancelClass: "btn-sm btn-default",
 				locale: {
-				  applyLabel: "Apply",
-				  cancelLabel: "Cancel",
+					applyLabel: "Apply",
+					cancelLabel: "Cancel",
 				},
-			  })
-			  .prev()
-			  .on(ace.click_event, function () {
+			})
+			.prev()
+			.on(ace.click_event, function () {
 				$(this).next().focus();
-			  });
-		  </script>
-		  <!--date range picker -->
-		  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    
+			});
 	</script>
-		  <script>
-			$(function () {
-			  $('input[name="daterange"]').daterangepicker(
+	<!--date range picker -->
+	<script>
+		$(function () {
+			$('input[name="daterange"]').daterangepicker(
 				{
-				  opens: "left",
+					opens: "left",
 				},
 				function (start, end, label) {
-				  console.log(
-					"A new date selection was made: " +
-					  start.format("YYYY-MM-DD") +
-					  " to " +
-					  end.format("YYYY-MM-DD")
-				  );
+					console.log(
+						"A new date selection was made: " +
+						start.format("YYYY-MM-DD") +
+						" to " +
+						end.format("YYYY-MM-DD")
+					);
 				}
-			  );
-			});
-		  </script>
-		  <!--end date range picker-->
+			);
+		});
+	</script>
 
-		  <script>
-			$(function () {
-			  $('input[name="daterange"]').daterangepicker(
-				{
-				  opens: "left",
-				},
-				function (start, end, label) {
-				  console.log(
-					"A new date selection was made: " +
-					start.format("YYYY-MM-DD") +
-					" to " +
-					end.format("YYYY-MM-DD")
-				  );
-				}
-			  );
-			});
-		  </script>
-		  <script src="assets/js/jquery-2.1.4.min.js"></script>
 
-		  <!-- <![endif]-->
-	  
-		  <!--[if IE]>
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+
+	<!-- <![endif]-->
+
+	<!--[if IE]>
 			<script src="assets/js/jquery-1.11.3.min.js"></script>
 		  <![endif]-->
-		  
-		  <script src="assets/js/bootstrap.min.js"></script>
-	  
-		  <!-- page specific plugin scripts -->
-	  
-		  <!-- ace scripts -->
-		  <script src="assets/js/ace-elements.min.js"></script>
-		  
-	  
-		  
-		  <script
-			type="text/javascript"
-			src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
-		  ></script>
-		  <script
-			type="text/javascript"
-			src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
-		  ></script>
-		  <script
-			type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
-		  ></script>
-		  <link
-			rel="stylesheet"
-			type="text/css"
-			href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
-		  />
-	  
-		  <!-- page specific plugin scripts -->
-		  <script src="assets/js/jquery.bootstrap-duallistbox.min.js"></script>
-	  
-		  <!-- inline scripts related to this page -->
-		  <script type="text/javascript">
-			jQuery(function ($) {
-			  var demo1 = $(
+
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!-- page specific plugin scripts -->
+
+	<!-- ace scripts -->
+	<script src="assets/js/ace-elements.min.js"></script>
+
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+	<!-- page specific plugin scripts -->
+	<script src="assets/js/jquery.bootstrap-duallistbox.min.js"></script>
+
+	<!-- inline scripts related to this page -->
+	<script type="text/javascript">
+		jQuery(function ($) {
+			var demo1 = $(
 				'select[name="duallistbox_demo1[]"]'
-			  ).bootstrapDualListbox({
+			).bootstrapDualListbox({
 				infoTextFiltered:
-				  '<span class="label label-purple label-lg">Filtered</span>',
-			  });
-			  var container1 = demo1.bootstrapDualListbox("getContainer");
-			  container1.find(".btn").addClass("btn-white btn-info btn-bold");
-			  $(".rating").raty({
+					'<span class="label label-purple label-lg">Filtered</span>',
+			});
+			var container1 = demo1.bootstrapDualListbox("getContainer");
+			container1.find(".btn").addClass("btn-white btn-info btn-bold");
+			$(".rating").raty({
 				cancel: true,
 				half: true,
 				starType: "i",
-			  });
 			});
-		  </script>
-	</body>
+		});
+	</script>
+	<script src="./assets/js/daterangepicker.min.js"></script>
+	
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script>
+	$(function() {
+	  $('input[name="daterange"]').daterangepicker({
+		opens: 'left'
+	  }, function(start, end, label) {
+		console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+	  });
+	});
+	</script>
+	 <!--delete current teacher-->
+	 <script type="text/javascript">
+		$(document).ready(function(){
+			// Find and remove selected table rows
+			$(".delete-row").click(function(){
+				$("#bodyt").find('input[name="record"]').each(function(){
+					if($(this).is(":checked")){
+						$(this).parents('#row').remove();                 
+					}
+				});
+			});       
+		});    
+	</script>
+</body>
+
 </html>
