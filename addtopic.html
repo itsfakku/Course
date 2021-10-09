@@ -593,7 +593,20 @@
 									placeholder="Enter name"
 								  />
 								</div>
-                                <!--choose teacher-->
+                      
+								<!--des-->
+								<div class="form-group">
+								  <label for="desc">Description</label>
+								  <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque hic, earum natus perferendis, quibusdam culpa pariatur itaque nobis mollitia, nisi illum voluptatem vel eius ut sit tempore laudantium magni quod?</textarea>
+								</div>
+							  </div>
+							  <div class="col-md-5" style="border: 2px solid #ddd; margin-left: 83px;">
+								<div class="col-xs-12"><br>
+                                    
+                                        
+                                            <!-- PAGE CONTENT BEGINS -->
+                                            
+                                                 <!--choose teacher-->
                       <div class="form-group" id="teacher">
                         <label>Choose teacher to</label>
                         search <input type="text" id="search" onkeyup="Search()"
@@ -644,44 +657,11 @@
                         </input>
                        
                       </div>
-								<!--des-->
-								<div class="form-group">
-								  <label for="desc">Description</label>
-								  <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque hic, earum natus perferendis, quibusdam culpa pariatur itaque nobis mollitia, nisi illum voluptatem vel eius ut sit tempore laudantium magni quod?</textarea>
-								</div>
-							  </div>
-							  <div class="col-md-5" style="border: 2px solid #ddd; margin-left: 83px;">
-								<div class="col-xs-12"><br>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <!-- PAGE CONTENT BEGINS -->
-                                            <form class="form-horizontal" role="form">
-                                                <div class="form-group">
-                                                    <label class="col-sm-2 control-label no-padding-top" for="duallist" style="margin-left: -10px;"> Add student </label>
-													<label class="col-sm-0 control-label no-padding-top" for="dualist" style="margin-left: -80px;"><br> Student list</label>
-													<label class="col-sm-0 control-label no-padding-top" for="dualist" style="margin-left: 240px;"><br> Assigned student</label>
-                                                    <div class="col-sm-12">
-                                                        <select multiple="multiple" size="10" name="duallistbox_demo1[]" id="duallist">
-                                                            <option value="option1">Option 1</option>
-                                                            <option value="option2">Option 2</option>
-                                                            <option value="option3" selected="selected">Option 3</option>
-                                                            <option value="option4">Option 4</option>
-                                                            <option value="option5">Option 5</option>
-                                                            <option value="option6" selected="selected">Option 6</option>
-                                                            <option value="option7">Option 7</option>
-                                                            <option value="option8">Option 8</option>
-                                                            <option value="option9">Option 9</option>
-                                                            <option value="option0">Option 10</option>
-                                                        </select>
-            
-                                                       
-                                                    </div>
-                                                </div>
-                                            </form>
+                                            
             
                                             <!-- PAGE CONTENT ENDS -->
-                                        </div><!-- /.col -->
-                                    </div><!-- /.row -->
+                                        
+                                    
 									<div class="col-xs-12">
 										
 									</div>
@@ -775,121 +755,11 @@
 		<script src="assets/js/bootstrap-editable.min.js"></script>
 		<script src="assets/js/ace-editable.min.js"></script>
 		<script src="assets/js/jquery.maskedinput.min.js"></script>
-        <script src="assets/js/jquery.bootstrap-duallistbox.min.js"></script>
 		<!-- ace scripts -->
 		<script src="assets/js/ace-elements.min.js"></script>
 		<script src="assets/js/ace.min.js"></script>
 
-		<!-- inline scripts related to this page -->
-        <script type="text/javascript">
-			jQuery(function($){
-			    var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({infoTextFiltered: '<span class="label label-purple label-lg">Filtered</span>'});
-				var container1 = demo1.bootstrapDualListbox('getContainer');
-				container1.find('.btn').addClass('btn-white btn-info btn-bold');
-			
-				/**var setRatingColors = function() {
-					$(this).find('.star-on-png,.star-half-png').addClass('orange2').removeClass('grey');
-					$(this).find('.star-off-png').removeClass('orange2').addClass('grey');
-				}*/
-				$('.rating').raty({
-					'cancel' : true,
-					'half': true,
-					'starType' : 'i'
-					/**,
-					
-					'click': function() {
-						setRatingColors.call(this);
-					},
-					'mouseover': function() {
-						setRatingColors.call(this);
-					},
-					'mouseout': function() {
-						setRatingColors.call(this);
-					}*/
-				})//.find('i:not(.star-raty)').addClass('grey');
-				
-				
-				
-				//////////////////
-				//select2
-				$('.select2').css('width','200px').select2({allowClear:true})
-				$('#select2-multiple-style .btn').on('click', function(e){
-					var target = $(this).find('input[type=radio]');
-					var which = parseInt(target.val());
-					if(which == 2) $('.select2').addClass('tag-input-style');
-					 else $('.select2').removeClass('tag-input-style');
-				});
-				
-				//////////////////
-				$('.multiselect').multiselect({
-				 enableFiltering: true,
-				 enableHTML: true,
-				 buttonClass: 'btn btn-white btn-primary',
-				 templates: {
-					button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> &nbsp;<b class="fa fa-caret-down"></b></button>',
-					ul: '<ul class="multiselect-container dropdown-menu"></ul>',
-					filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
-					filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
-					li: '<li><a tabindex="0"><label></label></a></li>',
-			        divider: '<li class="multiselect-item divider"></li>',
-			        liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>'
-				 }
-				});
-			
-				
-				///////////////////
-					
-				//typeahead.js
-				//example taken from plugin's page at: https://twitter.github.io/typeahead.js/examples/
-				var substringMatcher = function(strs) {
-					return function findMatches(q, cb) {
-						var matches, substringRegex;
-					 
-						// an array that will be populated with substring matches
-						matches = [];
-					 
-						// regex used to determine if a string contains the substring `q`
-						substrRegex = new RegExp(q, 'i');
-					 
-						// iterate through the pool of strings and for any string that
-						// contains the substring `q`, add it to the `matches` array
-						$.each(strs, function(i, str) {
-							if (substrRegex.test(str)) {
-								// the typeahead jQuery plugin expects suggestions to a
-								// JavaScript object, refer to typeahead docs for more info
-								matches.push({ value: str });
-							}
-						});
-			
-						cb(matches);
-					}
-				 }
-			
-				 $('input.typeahead').typeahead({
-					hint: true,
-					highlight: true,
-					minLength: 1
-				 }, {
-					name: 'states',
-					displayKey: 'value',
-					source: substringMatcher(ace.vars['US_STATES']),
-					limit: 10
-				 });
-					
-					
-				///////////////
-				
-				
-				//in ajax mode, remove remaining elements before leaving page
-				$(document).one('ajaxloadstart.page', function(e) {
-					$('[class*=select2]').remove();
-					$('select[name="duallistbox_demo1[]"]').bootstrapDualListbox('destroy');
-					$('.rating').raty('destroy');
-					$('.multiselect').multiselect('destroy');
-				});
-			
-			});
-		</script>
+		
 		
 		<script type="text/javascript">
 			jQuery(function($) {
@@ -1331,7 +1201,19 @@
 			});
 		</script>
         <script src="./assets/js/teacher.js"></script>
-        
+		<!--delete current teacher-->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// Find and remove selected table rows
+				$(".delete-row").click(function(){
+					$("#bodyt").find('input[name="record"]').each(function(){
+						if($(this).is(":checked")){
+							$(this).parents('#row').remove();                 
+						}
+					});
+				});       
+			});    
+		</script>
 		
 	</body>
 </html>
