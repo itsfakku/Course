@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>User Profile</title>
+		<title>User Profile Page - Ace Admin</title>
 
 		<meta name="description" content="3 styles with inline editable feature" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -563,294 +563,151 @@
 							</li>
 
 							<li>
-								<a href="#">User</a>
+								<a href="#">Topic</a>
 							</li>
-							<li class="active">User Profile</li>
+							<li class="active">Edit Topic</li>
 						</ul><!-- /.breadcrumb -->
-
-						<div class="nav-search" id="nav-search">
-							<form class="form-search">
-								<span class="input-icon">
-									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-									<i class="ace-icon fa fa-search nav-search-icon"></i>
-								</span>
-							</form>
-						</div><!-- /.nav-search -->
 					</div>
 
 					<div class="page-content">
 
 						<div class="page-header">
 							<h1>
-								User Profile
+								Edit Topic
 							</h1>
 						</div><!-- /.page-header -->
 
-						<div class="row">
-							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-								<div>
-									<div id="user-profile-1" class="user-profile row">
-										<div class="col-xs-12 col-sm-3 center">
-											<div>
-												<span class="profile-picture">
-													<img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="assets/images/avatars/profile-pic.jpg" />
-												</span>
-
-												<div class="space-4"></div>
-
-												<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
-													<div class="inline position-relative">
-														<a href="#" class="user-title-label dropdown-toggle" data-toggle="dropdown">
-															<i class="ace-icon fa fa-circle light-green"></i>
-															&nbsp;
-															<span class="white">Alex M. Doe</span>
-														</a>
-
-														
-													</div>
-												</div>
-											</div>
-
-											<div class="space-6"></div>
-
-											<div class="profile-contact-info">
-												<div class="profile-contact-links align-left">
-													<a href="#" class="btn btn-link">
-														<i class="ace-icon fa fa-plus-circle bigger-120 green"></i>
-														Add as a friend
-													</a>
-
-													<a href="#" class="btn btn-link">
-														<i class="ace-icon fa fa-envelope bigger-120 pink"></i>
-														Send a message
-													</a>
-
-													<a href="#" class="btn btn-link">
-														<i class="ace-icon fa fa-globe bigger-125 blue"></i>
-														www.alexdoe.com
-													</a>
-												</div>
-
-												<div class="space-6"></div>
-
-												<div class="profile-social-links align-center">
-													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Facebook">
-														<i class="middle ace-icon fa fa-facebook-square fa-2x blue"></i>
-													</a>
-
-													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Twitter">
-														<i class="middle ace-icon fa fa-twitter-square fa-2x light-blue"></i>
-													</a>
-
-													<a href="#" class="tooltip-error" title="" data-original-title="Visit my Pinterest">
-														<i class="middle ace-icon fa fa-pinterest-square fa-2x red"></i>
-													</a>
-												</div>
-											</div>
-
-										</div>
-
-										<div class="col-xs-12 col-sm-9">
-											<div class="space-12"></div>
-											<!--user profile-->
-											<div class="profile-user-info profile-user-info-striped">
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Username </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="username">abc</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Location </div>
-
-													<div class="profile-info-value">
-														<i class="fa fa-map-marker light-orange bigger-110"></i>
-														<span class="editable" id="country">Ha Noi</span>
-														<span class="editable" id="city">Viet Nam</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Age </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="age">20</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Phone Number </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="signup">12345</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Email </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="login">abc@abc</span>
-													</div>
-												</div>
-
-												
-											</div>
-
-											<div class="space-20"></div>
-											<!--course profiles-->
-											<div>
-												<div id="scroll" style="overflow: auto; height: 350px;">
-													<table id="dynamic-table" class="table table-striped table-bordered table-hover">
-														<thead>
-															<tr>
-																<!-- <th class="center">
-																	<label class="pos-rel">
-																		<input type="checkbox" class="ace" />
-																		<span class="lbl"></span>
-																	</label>
-																</th> -->
-																<th class="hidden-480">Course Id</th>
-																<th>Course Name</th>
-																<th class="hidden-480">Teacher</th>
-		
-																<th>
-																	<i class="hidden-480"></i>
-																	Grade
-																</th>
-																<th class="hidden-480">Status</th>
-		
-																
-															</tr>
-														</thead>
-														
-														<tbody>
-															
-															<tr>																		
-																<td>
-																	<a href="#">Svm12</a>
-																</td>
-																<td>abc</td>
-																<td class="hidden-480">abc</td>
-																<td>40.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-warning">Fail</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>	
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>	
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>	
-															<tr>																		
-																<td>
-																	<a href="#">Svm13</a>
-																</td>
-																<td>xyz</td>
-																<td class="hidden-480">xyz</td>
-																<td>60.00</td>
-		
-																<td class="hidden-480">
-																	<span class="label label-sm label-success">Pass</span>
-																</td>																		
-															</tr>																													
-														</tbody>
-														
-													</table>
-												</div>
-											</div>
-
-											
-										</div>
+						<div class="form-body">
+							<!-- DropZone -->
+							<div class="row">
+								<div class="col-xs-12">
+								  <!-- PAGE CONTENT BEGINS -->
+					<div class="col-md-6" style="border: 2px solid #ddd; margin-left : 50px;line-height: 20px;">
+								<!--course name-->
+								<div class="form-group">
+								  <label for="cname">Category name</label>
+								  <input
+									type="text"
+									name="cname"
+									id="cname"
+									placeholder="Enter name"
+								  />
+								</div>
+                                <!--choose teacher-->
+                      <div class="form-group" id="teacher">
+                        <label>Choose teacher to</label>
+                        search <input type="text" id="search" onkeyup="Search()"
+                          placeholder="Enter to search " /></br></br>
+                        <div id="scroll" style="height: 150px; overflow: auto;">
+                          <table id="tableData" style="cursor: pointer" class="table table-borderless table-hover">
+                            <thead>
+                              <th>Name</th>
+                              <th>Email</th>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>teacher 1</td>
+                                <td>teacher1@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <td>teacher 2</td>
+                                <td>teacher2@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <td>teacher 3</td>
+                                <td>teacher3@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <td>teacher 4</td>
+                                <td>teacher4@gmail.com</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <label>Current teacher</label>
+                        <table class="table table-borderless" id="teacher1">
+                          <thead>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Email</th>
+                          </thead>
+                          <tbody id="bodyt">
+                            <tr id="row">
+                              <td><input type='checkbox' name='record'></td>
+                              <td id="name">teacher 5</td>
+                              <td id="email">teacher@gmail.com</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <input type="button" class="btn btn-white btn-default btn-round delete-row"  value="Delete">
+                           
+                        </input>
+                       
+                      </div>
+								<!--des-->
+								<div class="form-group">
+								  <label for="desc">Description</label>
+								  <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque hic, earum natus perferendis, quibusdam culpa pariatur itaque nobis mollitia, nisi illum voluptatem vel eius ut sit tempore laudantium magni quod?</textarea>
+								</div>
+							  </div>
+							  <div class="col-md-5" style="border: 2px solid #ddd; margin-left: 83px;">
+								<div class="col-xs-12"><br>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <!-- PAGE CONTENT BEGINS -->
+                                            <form class="form-horizontal" role="form">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label no-padding-top" for="duallist" style="margin-left: -10px;"> Add student </label>
+													<label class="col-sm-0 control-label no-padding-top" for="dualist" style="margin-left: -80px;"><br> Student list</label>
+													<label class="col-sm-0 control-label no-padding-top" for="dualist" style="margin-left: 240px;"><br> Assigned student</label>
+                                                    <div class="col-sm-12">
+                                                        <select multiple="multiple" size="10" name="duallistbox_demo1[]" id="duallist">
+                                                            <option value="option1">Option 1</option>
+                                                            <option value="option2">Option 2</option>
+                                                            <option value="option3" selected="selected">Option 3</option>
+                                                            <option value="option4">Option 4</option>
+                                                            <option value="option5">Option 5</option>
+                                                            <option value="option6" selected="selected">Option 6</option>
+                                                            <option value="option7">Option 7</option>
+                                                            <option value="option8">Option 8</option>
+                                                            <option value="option9">Option 9</option>
+                                                            <option value="option0">Option 10</option>
+                                                        </select>
+            
+                                                       
+                                                    </div>
+                                                </div>
+                                            </form>
+            
+                                            <!-- PAGE CONTENT ENDS -->
+                                        </div><!-- /.col -->
+                                    </div><!-- /.row -->
+									<div class="col-xs-12">
+										
 									</div>
-								</div>								
-
-								<!-- PAGE CONTENT ENDS -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
+								</div>
+							  </div>
+								<!-- /.col -->
+							  </div>
+							  <br />
+							  <div class="form-footer" style="float: right; margin-right: 68px; margin-top: 10px;">
+								<button class="btn btn-white btn-default btn-round">
+								  <i class="ace-icon fa fa-times red2"></i>
+								  Cancel
+								</button>
+								<button class="btn btn-white btn-success btn-round">
+								  <i class="ace-icon fa fa-check"></i>
+								  Save & Add Another
+								</button>
+								<button class="btn btn-white btn-info btn-bold">
+								  <i class="ace-icon fa fa-floppy-o bigger-120 blue"></i>
+								  Save
+								</button>
+							  </div>
+					
+							  <!-- End of DropZone-->
+						</div>
+						
 					</div><!-- /.page-content -->
 				</div>
 			</div><!-- /.main-content -->
@@ -890,7 +747,6 @@
 
 		<!--[if !IE]> -->
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
-
 		<!-- <![endif]-->
 
 		<!--[if IE]>
@@ -919,12 +775,122 @@
 		<script src="assets/js/bootstrap-editable.min.js"></script>
 		<script src="assets/js/ace-editable.min.js"></script>
 		<script src="assets/js/jquery.maskedinput.min.js"></script>
-
+        <script src="assets/js/jquery.bootstrap-duallistbox.min.js"></script>
 		<!-- ace scripts -->
 		<script src="assets/js/ace-elements.min.js"></script>
 		<script src="assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
+        <script type="text/javascript">
+			jQuery(function($){
+			    var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({infoTextFiltered: '<span class="label label-purple label-lg">Filtered</span>'});
+				var container1 = demo1.bootstrapDualListbox('getContainer');
+				container1.find('.btn').addClass('btn-white btn-info btn-bold');
+			
+				/**var setRatingColors = function() {
+					$(this).find('.star-on-png,.star-half-png').addClass('orange2').removeClass('grey');
+					$(this).find('.star-off-png').removeClass('orange2').addClass('grey');
+				}*/
+				$('.rating').raty({
+					'cancel' : true,
+					'half': true,
+					'starType' : 'i'
+					/**,
+					
+					'click': function() {
+						setRatingColors.call(this);
+					},
+					'mouseover': function() {
+						setRatingColors.call(this);
+					},
+					'mouseout': function() {
+						setRatingColors.call(this);
+					}*/
+				})//.find('i:not(.star-raty)').addClass('grey');
+				
+				
+				
+				//////////////////
+				//select2
+				$('.select2').css('width','200px').select2({allowClear:true})
+				$('#select2-multiple-style .btn').on('click', function(e){
+					var target = $(this).find('input[type=radio]');
+					var which = parseInt(target.val());
+					if(which == 2) $('.select2').addClass('tag-input-style');
+					 else $('.select2').removeClass('tag-input-style');
+				});
+				
+				//////////////////
+				$('.multiselect').multiselect({
+				 enableFiltering: true,
+				 enableHTML: true,
+				 buttonClass: 'btn btn-white btn-primary',
+				 templates: {
+					button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> &nbsp;<b class="fa fa-caret-down"></b></button>',
+					ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+					filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+					filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
+					li: '<li><a tabindex="0"><label></label></a></li>',
+			        divider: '<li class="multiselect-item divider"></li>',
+			        liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>'
+				 }
+				});
+			
+				
+				///////////////////
+					
+				//typeahead.js
+				//example taken from plugin's page at: https://twitter.github.io/typeahead.js/examples/
+				var substringMatcher = function(strs) {
+					return function findMatches(q, cb) {
+						var matches, substringRegex;
+					 
+						// an array that will be populated with substring matches
+						matches = [];
+					 
+						// regex used to determine if a string contains the substring `q`
+						substrRegex = new RegExp(q, 'i');
+					 
+						// iterate through the pool of strings and for any string that
+						// contains the substring `q`, add it to the `matches` array
+						$.each(strs, function(i, str) {
+							if (substrRegex.test(str)) {
+								// the typeahead jQuery plugin expects suggestions to a
+								// JavaScript object, refer to typeahead docs for more info
+								matches.push({ value: str });
+							}
+						});
+			
+						cb(matches);
+					}
+				 }
+			
+				 $('input.typeahead').typeahead({
+					hint: true,
+					highlight: true,
+					minLength: 1
+				 }, {
+					name: 'states',
+					displayKey: 'value',
+					source: substringMatcher(ace.vars['US_STATES']),
+					limit: 10
+				 });
+					
+					
+				///////////////
+				
+				
+				//in ajax mode, remove remaining elements before leaving page
+				$(document).one('ajaxloadstart.page', function(e) {
+					$('[class*=select2]').remove();
+					$('select[name="duallistbox_demo1[]"]').bootstrapDualListbox('destroy');
+					$('.rating').raty('destroy');
+					$('.multiselect').multiselect('destroy');
+				});
+			
+			});
+		</script>
+		
 		<script type="text/javascript">
 			jQuery(function($) {
 			
@@ -1364,5 +1330,8 @@
 				});
 			});
 		</script>
+        <script src="./assets/js/teacher.js"></script>
+        
+		
 	</body>
 </html>
