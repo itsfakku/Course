@@ -23,7 +23,7 @@ function tableText(tableRow) {
     $("#bodyt").append(markup);
     count++;
   } else {
-    alert("can assign 1 teacher");
+    alert("Can assign only 1 teacher");
   }
 }
 function Search() {
@@ -53,7 +53,7 @@ function Search() {
   }
 }
 function deleteRow(row) {
-  var x = confirm("Are you sure you want to delete?");
+  var x = confirm("Are you sure you want to delete ?");
   if (x) {
     var i = row.parentNode.parentNode.rowIndex;
     teacher.deleteRow(i);

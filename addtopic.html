@@ -607,10 +607,10 @@
                                             <!-- PAGE CONTENT BEGINS -->
                                             
                                                  <!--choose teacher-->
-                      <div class="form-group" id="teacher">
-                        <label>Choose teacher to</label>
-                        search <input type="text" id="search" onkeyup="Search()"
-                          placeholder="Enter to search " /></br></br>
+                      <div class="form-group" id="teacher" style="margin-bottom: 11%;">
+                        <label>Teacher</label>
+                         <input type="text" id="search" onkeyup="Search()"
+                          placeholder="Search teacher" /></br></br>
                         <div id="scroll" style="height: 150px; overflow: auto;">
                           <table id="tableData" style="cursor: pointer" class="table table-borderless table-hover">
                             <thead>
@@ -640,18 +640,11 @@
                         <label>Current teacher</label>
                         <table class="table table-borderless" id="teacher1">
                           <thead>
-                            <th></th>
                             <th>Name</th>
                             <th>Email</th>
+							<th></th>
                           </thead>
                           <tbody id="bodyt">
-							<tr id="row">
-								<td id="name">teacher 5</td>
-								<td id="email">teacher@gmail.com</td>
-								<td><button style="color: red;" type="button" id="btnDelete" class="close" aria-label="Close" onclick="deleteRow(this)">
-									<span aria-hidden="true">&times;</span>
-								  </button></td>
-							</tr>
 						</tbody>
                         </table>
                        
