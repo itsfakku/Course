@@ -534,6 +534,17 @@
             <li class="active">Add course</li>
           </ul>
           <!-- /.breadcrumb -->
+
+          <div class="nav-search" id="nav-search">
+            <form class="form-search">
+              <span class="input-icon">
+                <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input"
+                  autocomplete="off" />
+                <i class="ace-icon fa fa-search nav-search-icon"></i>
+              </span>
+            </form>
+          </div>
+          <!-- /.nav-search -->
         </div>
 
         <div class="page-content">
@@ -612,14 +623,14 @@
                       <div class="form-group" id="teacher">
                         <label>Choose teacher to</label>
                         search <input type="text" id="search" onkeyup="Search()"
-                          placeholder="Enter to search" /></br></br>
+                          placeholder="Type here for searching " /></br></br>
                         <div id="scroll" style="height: 150px; overflow: auto;">
                           <table id="tableData" style="cursor: pointer" class="table table-borderless table-hover">
                             <thead>
                               <th>Name</th>
                               <th>Email</th>
                             </thead>
-                            <tbody>
+                            <tbody id="addbody">
                               <tr>
                                 <td>teacher 1</td>
                                 <td>teacher1@gmail.com</td>
@@ -639,26 +650,16 @@
                             </tbody>
                           </table>
                         </div>
-
                         <label>Current teacher</label>
                         <table class="table table-borderless" id="teacher1">
                           <thead>
-                            <th></th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th></th>
                           </thead>
                           <tbody id="bodyt">
-                            <tr id="row">
-                              <td><input type='checkbox' name='record'></td>
-                              <td id="name">teacher 5</td>
-                              <td id="email">teacher@gmail.com</td>
-                            </tr>
                           </tbody>
-                        </table>
-                        <input type="button" class="btn btn-white btn-default btn-round delete-row"  value="Delete">
-                           
-                        </input>
-                       
+                        </table>                    
                       </div>
                     </div>
                     <!--End of choose teacher-->
@@ -685,7 +686,7 @@
                         <label for="id-date-range-picker-1">Schedule</label>
 
                         <div class="row">
-                          <div class="col-xs-8 col-sm-12">
+                          <div class="col-xs-8 col-sm-11">
                             <div class="input-group">
                               <span class="input-group-addon">
                                 <i class="fa fa-calendar bigger-110"></i>
@@ -700,7 +701,7 @@
                       <!--des-->
                       <div class="form-group">
                         <label for="desc">Description</label>
-                        <textarea name="" id="" cols="30" rows="13" style="margin-bottom: 5px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque hic, earum natus perferendis, quibusdam culpa pariatur itaque nobis mollitia, nisi illum voluptatem vel eius ut sit tempore laudantium magni quod?</textarea>
+                        <textarea name="" id="" cols="30" rows="10" style="margin-bottom: 4px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque hic, earum natus perferendis, quibusdam culpa pariatur itaque nobis mollitia, nisi illum voluptatem vel eius ut sit tempore laudantium magni quod?</textarea>
                       </div>
                     </div>
                   </div>
@@ -715,8 +716,20 @@
           <!-- /.row -->
         </div>
         <!-- /.page-content -->
-
-
+      <div class="form-footer" style="float: right; margin-right: 54px">
+        <button class="btn btn-white btn-default btn-round">
+          <i class="ace-icon fa fa-times red2"></i>
+          Cancel
+        </button>
+        <button class="btn btn-white btn-success btn-round">
+          <i class="ace-icon fa fa-check"></i>
+          Save & Add Another
+        </button>
+        <button class="btn btn-white btn-info btn-bold">
+          <i class="ace-icon fa fa-floppy-o bigger-120 blue"></i>
+          Save
+        </button>
+      </div>
     </div>
     <!-- /.main-content -->
 
@@ -808,9 +821,7 @@
   <!-- ace scripts -->
   <script src="assets/js/ace-elements.min.js"></script>
   <script src="assets/js/ace.min.js"></script>
-  <script src="assets/js/dropzone.min.js"></script>
- 
-
+  
   <!--date range picker -->
   <script>
     $(function () {
@@ -864,19 +875,7 @@
   <!-- inline scripts related to this page -->
   <script src="./assets/js/teacher.js"></script>
   <script src="./assets/js/daterangepicker.min.js"></script>
-  <!--delete current teacher-->
-  <script type="text/javascript">
-    $(document).ready(function(){
-        // Find and remove selected table rows
-        $(".delete-row").click(function(){
-            $("#bodyt").find('input[name="record"]').each(function(){
-                if($(this).is(":checked")){
-                    $(this).parents('#row').remove();                 
-                }
-            });
-        });       
-    });    
-</script>
+ 
 </body>
 
 </html>

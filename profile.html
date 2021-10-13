@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>User Profile Page - Ace Admin</title>
+		<title>User Profile</title>
 
 		<meta name="description" content="3 styles with inline editable feature" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -73,11 +73,6 @@
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
 						<li class="grey dropdown-modal">
-							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-								<i class="ace-icon fa fa-tasks"></i>
-								<span class="badge badge-grey">4</span>
-							</a>
-
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
 								<li class="dropdown-header">
 									<i class="ace-icon fa fa-check"></i>
@@ -572,22 +567,13 @@
 							</li>
 							<li class="active">User Profile</li>
 						</ul><!-- /.breadcrumb -->
-
-						<div class="nav-search" id="nav-search">
-							<form class="form-search">
-								<span class="input-icon">
-									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-									<i class="ace-icon fa fa-search nav-search-icon"></i>
-								</span>
-							</form>
-						</div><!-- /.nav-search -->
 					</div>
 
 					<div class="page-content">
 
 						<div class="page-header">
 							<h1>
-								User Profile Page
+								User Profile
 							</h1>
 						</div><!-- /.page-header -->
 
@@ -630,13 +616,23 @@
 
 													<a href="#" class="btn btn-link">
 														<i class="ace-icon fa fa-globe bigger-125 blue"></i>
-														www.alexdoe.com
+														www.doealex.com
 													</a>
 												</div>
 
 												<div class="space-6"></div>
 
-												
+												<div class="profile-social-links align-center">
+													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Facebook">
+														<i class="middle ace-icon fa fa-facebook-square fa-2x blue"></i>
+													</a>
+
+													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Twitter">
+														<i class="middle ace-icon fa fa-twitter-square fa-2x light-blue"></i>
+													</a>
+
+													
+												</div>
 											</div>
 
 										</div>
@@ -652,14 +648,15 @@
 														<span class="editable" id="username">abc</span>
 													</div>
 												</div>
+
 												<div class="profile-info-row">
 													<div class="profile-info-name"> Role </div>
 
 													<div class="profile-info-value">
-														<span class="editable" id="role">abc</span>
+														<span class="editable" id="username"> Admin </span>
 													</div>
 												</div>
-												
+
 												<div class="profile-info-row">
 													<div class="profile-info-name"> Location </div>
 
@@ -690,7 +687,7 @@
 													<div class="profile-info-name"> Email </div>
 
 													<div class="profile-info-value">
-														<span class="editable" id="about">abc@abc</span>
+														<span class="editable" id="email">abc@abc</span>
 													</div>
 												</div>
 
@@ -856,8 +853,8 @@
 				<div class="footer-inner">
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">Ace</span>
-							Application &copy; 2013-2014
+							<span class="blue bolder">@</span>
+							fptlearning
 						</span>
 
 						&nbsp; &nbsp;
@@ -939,21 +936,12 @@
 					type: 'text',
 					name: 'username'		
 			    });
-				$('#role')
-				.editable({
-					type: 'text',
-					name: 'role'		
-			    });
-				$('#phone')
-				.editable({
-					type: 'text',
-					name: 'phone'		
-			    });
+			
 			
 				
 				//select2 editable
 				var countries = [];
-			    $.each({ "CA": "Canada", "IN": "India", "NL": "Netherlands", "TR": "Turkey", "US": "United States"}, function(k, v) {
+			    $.each({ "CA": "Canada", "IN": "India", "NL": "Netherlands", "TR": "Turkey", "US": "United States", "Vn": "Viet Nam"}, function(k, v) {
 			        countries.push({id: k, text: v});
 			    });
 			
@@ -978,11 +966,15 @@
 				$.each(["New York", "Miami", "Los Angeles", "Chicago", "Wysconsin"] , function(k, v){
 					cities["US"].push({id: v, text: v});
 				});
+				cities["Vn"] = [];
+				$.each(["Ha Noi", "Tp.Ho Chi Minh", "Da Nang", "Hue"] , function(k, v){
+					cities["Vn"].push({id: v, text: v});
+				});
 				
-				var currentValue = "NL";
+				var currentValue = "Vn";
 			    $('#country').editable({
 					type: 'select2',
-					value : 'NL',
+					value : 'Vn',
 					//onblur:'ignore',
 			        source: countries,
 					select2: {
@@ -1021,7 +1013,7 @@
 			
 				$('#city').editable({
 					type: 'select2',
-					value : 'Amsterdam',
+					value : 'Ha Noi',
 					//onblur:'ignore',
 			        source: cities[currentValue],
 					select2: {
@@ -1032,19 +1024,16 @@
 			
 				
 				//custom date editable
-				$('#signup').editable({
-					type: 'adate',
-					date: {
-						//datepicker plugin options
-						    format: 'yyyy/mm/dd',
-						viewformat: 'yyyy/mm/dd',
-						 weekStart: 1
-						 
-						//,nativeUI: true//if true and browser support input[type=date], native browser control will be used
-						//,format: 'yyyy-mm-dd',
-						//viewformat: 'yyyy-mm-dd'
-					}
-				})
+				$('#phone')
+				.editable({
+					type: 'text',
+					name: 'phone'		
+			    });
+				$('#email')
+				.editable({
+					type: 'text',
+					name: 'phone'		
+			    });
 			
 			    $('#age').editable({
 			        type: 'spinner',
@@ -1087,18 +1076,6 @@
 					success: function(response, newValue) {
 					}
 				});
-				$('#about1').editable({
-					mode: 'inline',
-			        type: 'wysiwyg',
-					name : 'about',
-			
-					wysiwyg : {
-						//css : {'max-width':'300px'}
-					},
-					success: function(response, newValue) {
-					}
-				});
-				
 				
 				
 				
