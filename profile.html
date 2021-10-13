@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>User Profile</title>
+		<title>User Profile Page - Ace Admin</title>
 
 		<meta name="description" content="3 styles with inline editable feature" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -73,6 +73,11 @@
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
 						<li class="grey dropdown-modal">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="ace-icon fa fa-tasks"></i>
+								<span class="badge badge-grey">4</span>
+							</a>
+
 							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
 								<li class="dropdown-header">
 									<i class="ace-icon fa fa-check"></i>
@@ -567,13 +572,22 @@
 							</li>
 							<li class="active">User Profile</li>
 						</ul><!-- /.breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="ace-icon fa fa-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- /.nav-search -->
 					</div>
 
 					<div class="page-content">
 
 						<div class="page-header">
 							<h1>
-								User Profile
+								User Profile Page
 							</h1>
 						</div><!-- /.page-header -->
 
@@ -607,10 +621,7 @@
 
 											<div class="profile-contact-info">
 												<div class="profile-contact-links align-left">
-													<a href="#" class="btn btn-link">
-														<i class="ace-icon fa fa-plus-circle bigger-120 green"></i>
-														Add as a friend
-													</a>
+													
 
 													<a href="#" class="btn btn-link">
 														<i class="ace-icon fa fa-envelope bigger-120 pink"></i>
@@ -619,25 +630,13 @@
 
 													<a href="#" class="btn btn-link">
 														<i class="ace-icon fa fa-globe bigger-125 blue"></i>
-														www.doealex.com
+														www.alexdoe.com
 													</a>
 												</div>
 
 												<div class="space-6"></div>
 
-												<div class="profile-social-links align-center">
-													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Facebook">
-														<i class="middle ace-icon fa fa-facebook-square fa-2x blue"></i>
-													</a>
-
-													<a href="#" class="tooltip-info" title="" data-original-title="Visit my Twitter">
-														<i class="middle ace-icon fa fa-twitter-square fa-2x light-blue"></i>
-													</a>
-
-													<a href="#" class="tooltip-error" title="" data-original-title="Visit my Pinterest">
-														<i class="middle ace-icon fa fa-pinterest-square fa-2x red"></i>
-													</a>
-												</div>
+												
 											</div>
 
 										</div>
@@ -653,22 +652,21 @@
 														<span class="editable" id="username">abc</span>
 													</div>
 												</div>
-
 												<div class="profile-info-row">
 													<div class="profile-info-name"> Role </div>
 
 													<div class="profile-info-value">
-														<span class="editable" id="username"> Admin </span>
+														<span class="editable" id="role">abc</span>
 													</div>
 												</div>
-
+												
 												<div class="profile-info-row">
 													<div class="profile-info-name"> Location </div>
 
 													<div class="profile-info-value">
 														<i class="fa fa-map-marker light-orange bigger-110"></i>
-														<span class="editable" id="country">Ha Noi</span>
-														<span class="editable" id="city">Viet Nam</span>
+														<span class="editable" id="country">Viet Nam</span>
+														<span class="editable" id="city">Ha Noi</span>
 													</div>
 												</div>
 
@@ -684,7 +682,7 @@
 													<div class="profile-info-name"> Phone Number </div>
 
 													<div class="profile-info-value">
-														<span class="editable" id="signup">12345</span>
+														<span class="editable" id="phone">12345</span>
 													</div>
 												</div>
 
@@ -692,7 +690,7 @@
 													<div class="profile-info-name"> Email </div>
 
 													<div class="profile-info-value">
-														<span class="editable" id="login">abc@abc</span>
+														<span class="editable" id="about">abc@abc</span>
 													</div>
 												</div>
 
@@ -858,8 +856,8 @@
 				<div class="footer-inner">
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">@</span>
-							fptlearning
+							<span class="blue bolder">Ace</span>
+							Application &copy; 2013-2014
 						</span>
 
 						&nbsp; &nbsp;
@@ -941,7 +939,16 @@
 					type: 'text',
 					name: 'username'		
 			    });
-			
+				$('#role')
+				.editable({
+					type: 'text',
+					name: 'role'		
+			    });
+				$('#phone')
+				.editable({
+					type: 'text',
+					name: 'phone'		
+			    });
 			
 				
 				//select2 editable
@@ -1080,6 +1087,18 @@
 					success: function(response, newValue) {
 					}
 				});
+				$('#about1').editable({
+					mode: 'inline',
+			        type: 'wysiwyg',
+					name : 'about',
+			
+					wysiwyg : {
+						//css : {'max-width':'300px'}
+					},
+					success: function(response, newValue) {
+					}
+				});
+				
 				
 				
 				
