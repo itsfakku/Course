@@ -10,7 +10,7 @@ function tableText(tableRow) {
   var name = tableRow.childNodes[1].innerHTML;
   var email = tableRow.childNodes[3].innerHTML;
   if (teacher.rows.length <= 1) {
-    var btn = `<button style="color: red;" type="button" id="btnDelete" class="close" aria-label="Close" onclick="deleteRow(this)">
+    var btn = `<button style="color: red; opacity : 100%" type="button" id="btnDelete" class="close" aria-label="Close" onclick="deleteRow(this)">
     <span aria-hidden="true">&times;</span></button>`;
     var markup =
       "<tr id ='row'> <td id='name'>" +
