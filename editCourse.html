@@ -42,7 +42,14 @@
 		<![endif]-->
 
 	<!-- inline styles related to this page -->
-
+	<style>
+		#tableData thead th{
+			position: sticky;
+			top: 0;
+			background-color: #ddd;
+			color: #707070;
+			}
+	</style>
 	<!-- ace settings handler -->
 	<script src="assets/js/ace-extra.min.js"></script>
 
@@ -734,11 +741,27 @@
 																			<td>teacher 4</td>
 																			<td>teacher4@gmail.com</td>
 																		</tr>
+																		<tr>
+																			<td>teacher 5</td>
+																			<td>teacher5@gmail.com</td>
+																		</tr>
+																		<tr>
+																			<td>teacher 6</td>
+																			<td>teacher6@gmail.com</td>
+																		</tr>
+																		<tr>
+																			<td>teacher 7</td>
+																			<td>teacher7@gmail.com</td>
+																		</tr>
+																		<tr>
+																			<td>teacher 8</td>
+																			<td>teacher8@gmail.com</td>
+																		</tr>
 																	</tbody>
 																</table>
 															</div><br>
 															<label>Current teacher</label>
-															<table class="table table-borderless" id="teacher1">
+															<table class="table table-borderless" id="teacher1" style="border: 1px solid #ddd;">
 																<thead>
 																	
 																	<th>Name</th>
@@ -747,10 +770,11 @@
 																<tbody id="bodyt">
 																	<tr id="row">
 																		<td id="name">teacher 5</td>
-																		<td id="email">teacher@gmail.com</td>
+																		<td id="email">teacher5@gmail.com</td>
 																		<td><button style="color: red; opacity: 100%;" type="button" id="btnDelete" class="close" aria-label="Close" onclick="deleteRow(this)">
 																			<span aria-hidden="true">&times;</span>
-																		  </button></td>
+																			</button>
+																		</td>
 																	</tr>
 																</tbody>
 															</table>
@@ -1483,8 +1507,8 @@
 	  });
 	});
 	</script>
-	 <!--delete current teacher-->
-	 <script type="text/javascript">
+	<!--delete current teacher-->
+	<script type="text/javascript">
 		$(document).ready(function(){
 			// Find and remove selected table rows
 			$(".delete-row").click(function(){
