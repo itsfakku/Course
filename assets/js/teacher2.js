@@ -1,40 +1,45 @@
-var table = document.getElementById("tableData");
-var teacher = document.getElementById("teacher1");
-for (var i = 1; i <= table.rows.length; i++) {
-  table.rows[i].onclick = function () {
-    tableText(this);
-  };
-}
+var rIndex,
+  tName,
+  email,
+  table = document.getElementById("tableData"),
+  table1 = document.getElementById("teacher1"),
+  currTeacher = document.getElementById("bodyteacher"),
+  teacher = document.getElementById("bodyt");
 
-function tableText(tableRow) {
-  var count = 0;
-  var name = tableRow.childNodes[1].innerHTML;
-  var email = tableRow.childNodes[3].innerHTML;
+selectTeacher();
+function selectTeacher() {
   var index = -1;
-  if (teacher.rows.length <= 10) {
-    for (var a = 1; a < teacher.rows.length; a++) {
-      if (teacher.rows[a].cells[0].innerHTML == name) {
-        index = teacher.rows[a].rowIndex;
+  for (var i = 1; i < table.rows.length; i++) {
+    table.rows[i].onclick = function () {
+      rIndex = this.rowIndex;
+      tName = this.cells[0].innerHTML;
+      email = this.cells[1].innerHTML;
+      //teacher <=10
+      if (teacher.rows.length <= 10) {
+        for (var a = 1; a < teacher.rows.length; a++) {
+          if (teacher.rows[a].cells[0].innerHTML == tName) {
+            index = a;
+          }
+        }
+        if (index == -1) {
+          //delete teacher assigned 
+          table.deleteRow(rIndex);
+          //add new teacher to topic
+          var newRow = teacher.insertRow(teacher.length),
+            cell1 = newRow.insertCell(0),
+            cell2 = newRow.insertCell(1),
+            cell3 = newRow.insertCell(2);
+          cell1.innerHTML = tName;
+          cell2.innerHTML = email;
+          cell3.innerHTML = `<button style="color: red; opacity : 100%" type="button" id="btnDelete" class="close" aria-label="Close" onclick="deleteRow(this)">
+          <span aria-hidden="true">&times;</span></button>`;
+        } else {
+          alert("teacher existed");
+        }
+      } else {
+        alert("Can assign only 1 teacher");
       }
-    }
-    if (index == -1) {
-      var btn = `<button style="color: red; opacity : 100%" type="button" id="btnDelete" class="close" aria-label="Close" onclick="deleteRow(this)">
-      <span aria-hidden="true">&times;</span></button>`;
-      var markup =
-        "<tr id ='row'> <td id='name'>" +
-        name +
-        "</td> <td id='email'>" +
-        email +
-        "</td><td>" +
-        btn +
-        "</td></tr>";
-      $("#bodyt").append(markup);
-      count == count + 1;
-    } else {
-      alert("This teacher is already assigned !");
-    }
-  } else {
-    alert("Can assign only 1 teacher");
+    };
   }
 }
 function Search() {
@@ -67,7 +72,15 @@ function deleteRow(row) {
   var x = confirm("Are you sure you want to delete ?");
   if (x) {
     var i = row.parentNode.parentNode.rowIndex;
-    teacher.deleteRow(i);
+    console.log(table1.rows[i].cells[0].innerHTML);
+    var newRow = currTeacher.insertRow(currTeacher.length),
+      o1 = newRow.insertCell(0),
+      o2 = newRow.insertCell(1);
+    o1.innerHTML = table1.rows[i].cells[0].innerHTML;
+    o2.innerHTML = table1.rows[i].cells[1].innerHTML;
+    table1.deleteRow(i);
+    selectTeacher();
   } else return false;
 }
-function checkExisted() {}
+
+function getRowData() { }

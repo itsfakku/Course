@@ -617,7 +617,7 @@
 											</tr>
 										</thead>
 										
-										<tbody>
+										<tbody id="course">
 											<tr> 
 												<!-- <td class="center">
 													<label class="pos-rel">
@@ -648,7 +648,7 @@
 															<i class="ace-icon fa fa-pencil bigger-130"></i>
 														</a>
 
-														<a class="red" href="#">
+														<a class="red" href="#" onclick="deletelist(this)">
 															<i class="ace-icon fa fa-trash-o bigger-130"></i>
 														</a>
 													</div>
@@ -718,7 +718,7 @@
 															<i class="ace-icon fa fa-pencil bigger-130"></i>
 														</a>
 
-														<a class="red" href="#">
+														<a class="red" href="#" onclick="deletelist(this)">
 															<i class="ace-icon fa fa-trash-o bigger-130"></i>
 														</a>
 													</div>
@@ -800,7 +800,7 @@
 		</div><!-- /.main-container -->
 
 		<!-- basic scripts -->
-
+		
 		<!--[if !IE]> -->
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
 
@@ -827,6 +827,7 @@
 		<!-- ace scripts -->
 		<script src="assets/js/ace-elements.min.js"></script>
 		<script src="assets/js/ace.min.js"></script>
+		<script src="assets/js/delete.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">

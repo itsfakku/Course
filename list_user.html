@@ -624,7 +624,7 @@
 											</tr>
 										</thead>
 										
-										<tbody>
+										<tbody id="listuser">
 											<tr> 
 												<!-- <td class="center">
 													<label class="pos-rel">
@@ -655,7 +655,7 @@
 															<i class="ace-icon fa fa-pencil bigger-130"></i>
 														</a>
 
-														<a class="red" href="#">
+														<a class="red" href="#" onclick="deleteuser(this)">
 															<i class="ace-icon fa fa-trash-o bigger-130"></i>
 														</a>
 													</div>
@@ -724,7 +724,7 @@
 															<i class="ace-icon fa fa-pencil bigger-130"></i>
 														</a>
 
-														<a class="red" href="#">
+														<a class="red" href="#" onclick="deleteuser(this)">
 															<i class="ace-icon fa fa-trash-o bigger-130"></i>
 														</a>
 													</div>
@@ -945,10 +945,11 @@
 		<script src="assets/js/buttons.print.min.js"></script>
 		<script src="assets/js/buttons.colVis.min.js"></script>
 		<script src="assets/js/dataTables.select.min.js"></script>
-
+		
 		<!-- ace scripts -->
 		<script src="assets/js/ace-elements.min.js"></script>
 		<script src="assets/js/ace.min.js"></script>
+		<script src="assets/js/delete.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
