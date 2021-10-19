@@ -69,7 +69,7 @@ function Search() {
   }
 }
 function deleteRow(row) {
-  var x = confirm("Are you sure you want to delete ?");
+  var x = deleteRow
   if (x) {
     var i = row.parentNode.parentNode.rowIndex;
     console.log(table1.rows[i].cells[0].innerHTML);
