@@ -921,12 +921,6 @@
 				
 				//editables 
 				
-				//text editable
-			    $('#username')
-				.editable({
-					type: 'text',
-					name: 'username'		
-			    });
 			
 			
 				
@@ -963,81 +957,6 @@
 				});
 				
 				var currentValue = "Vn";
-			    $('#country').editable({
-					type: 'select2',
-					value : 'Vn',
-					//onblur:'ignore',
-			        source: countries,
-					select2: {
-						'width': 140
-					},		
-					success: function(response, newValue) {
-						if(currentValue == newValue) return;
-						currentValue = newValue;
-						
-						var new_source = (!newValue || newValue == "") ? [] : cities[newValue];
-						
-						//the destroy method is causing errors in x-editable v1.4.6+
-						//it worked fine in v1.4.5
-						/**			
-						$('#city').editable('destroy').editable({
-							type: 'select2',
-							source: new_source
-						}).editable('setValue', null);
-						*/
-						
-						//so we remove it altogether and create a new element
-						var city = $('#city').removeAttr('id').get(0);
-						$(city).clone().attr('id', 'city').text('Select City').editable({
-							type: 'select2',
-							value : null,
-							//onblur:'ignore',
-							source: new_source,
-							select2: {
-								'width': 140
-							}
-						}).insertAfter(city);//insert it after previous instance
-						$(city).remove();//remove previous instance
-						
-					}
-			    });
-			
-				$('#city').editable({
-					type: 'select2',
-					value : 'Ha Noi',
-					//onblur:'ignore',
-			        source: cities[currentValue],
-					select2: {
-						'width': 140
-					}
-			    });
-			
-			
-				
-				//custom date editable
-				$('#phone')
-				.editable({
-					type: 'text',
-					name: 'phone'		
-			    });
-				$('#email')
-				.editable({
-					type: 'text',
-					name: 'phone'		
-			    });
-			
-			    $('#age').editable({
-			        type: 'spinner',
-					name : 'age',
-					spinner : {
-						min : 16,
-						max : 99,
-						step: 1,
-						on_sides: true
-						//,nativeUI: true//if true and browser support input[type=number], native browser control will be used
-					}
-				});
-				
 			
 			    $('#login').editable({
 			        type: 'slider',
