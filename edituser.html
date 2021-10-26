@@ -586,26 +586,16 @@
 
 						<!-- role -->
 						<div class="col-xs-10" style="border: 1px solid #b1a5a5c7; margin-left: 10%;">
-							<div class="form-group" style="margin-left: 40px;"><br>
+							<div class="form-group" style="margin-left: 40px; margin-bottom: -20px;"><br>
 							<label for="cname" style="float: left;">Role</label>									
-								<div class="col-md-8" style="border: 1px solid #b1a5a5c7; float: right; width: 95%;margin-right: 5%;">									
-									<div class="form-check form-check-inline col-xs-2" style="margin-left: 15%; margin-top: 4px;" >
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-										<label class="form-check-label" for="inlineRadio1">Admin</label>
-									</div >
-									<div class="form-check form-check-inline col-xs-2" style="margin-top: 4px;">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-										<label class="form-check-label" for="inlineRadio2">Staff</label>
-									</div>
-									<div class="form-check form-check-inline col-xs-2" style="margin-top: 4px;">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-										<label class="form-check-label" for="inlineRadio3">Teacher</label>
-									</div>
-									<div class="form-check form-check-inline col-xs-2" style="margin-top: 4px;">
-										<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-										<label class="form-check-label" for="inlineRadio3">Student</label>
-									</div>
-								</div>
+							<div class="form-group">
+								<select class="form-select" aria-label="Default select example" name="topic" id="topic">
+								  <option selected>Current role</option>
+								  <option value="1">Admin</option>
+								  <option value="2">Teacher</option>
+								  <option value="3">Student</option>
+								</select>
+							  </div>
 							</div><br>
 							<div class="form-group" style="margin-left: 40px;">
 								<label for="cname">User Name</label>
