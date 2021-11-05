@@ -619,12 +619,17 @@
 								<!-- div.dataTables_borderWrap -->
 								<div>
 									<div>
-										<!-- <input type="button" value="add new" style="float: right; margin-right: 87px;"> -->
-										<!-- <a href="addtopic.html" style="float: right;background-color: #92abca; color: #393939;padding: 5px 5px;margin-right: 90px;text-align: center;
-										text-decoration: none;
-										display: inline-block;" target="_blank">Add New</a> -->
-										<button class="btn btn-white btn-success btn-round" style="float: right; margin-right: 89px; padding: 3px;">
-											<a href="addcategory.html" style="text-decoration: none; color: #81a87b;">Add New</a>
+										<button id="btnDelete" class="btn btn-white  btn-round" style="float: right; padding: 2px;margin-right: 10px; border-color: #ee8282; margin-bottom: 3px;margin-top: 12px;">
+											<a  style="text-decoration: none; color: #ee8282;">
+												<i class=" ace-icon fa fa-trash-o"></i>
+												Del
+											</a>
+										</button>
+										<button class="btn btn-white btn-success btn-round" style="float: right; padding: 2px; margin-right: 3px; margin-top: 12px;">
+											<a href="addCourse.html" style="text-decoration: none; color: #81a87b;">
+												<i class=" ace-icon fa fa-pencil-square-o"></i>
+												Add
+											</a>
 										</button>
 									</div>
 									<table id="dynamic-table" class="table table-striped table-bordered table-hover">
@@ -1069,7 +1074,22 @@
 				  }
 				).css('padding-top', '12px');
 				*/
-			
+				//delete select
+				document.getElementById('btnDelete').addEventListener('click', function() {
+				var tableRef = document.getElementById('dynamic-table');
+				var tableRows = document.getElementById('dynamic-table').rows;
+
+				var checkedRows = [];
+				for (var i = 1; i < tableRows.length; i++) {
+					if (tableRows[i].querySelector('input').checked) {
+						checkedRows.push(tableRows[i]);
+					}
+				}
+
+				for (var k = 0; k < checkedRows.length; k++) {
+					checkedRows[k].parentNode.removeChild(checkedRows[k]);
+				}
+				});
 			
 			})
 		</script>
