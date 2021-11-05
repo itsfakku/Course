@@ -714,7 +714,7 @@
 								</div><br>
 								<div class="form-group" style="width: 94%;">
 									<label for="cname">Address</label>
-									<div class="api" style="border: 1px solid #b1a5a5c7; cursor: pointer;">
+									<div class="api" style="border: 1px solid #b1a5a5c7; ">
 										<div class="container mx-auto px-5 flex flex-col flex-1">
 											<div x-data="formApp" class="mt-4">
 												<div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4" style="flex-direction: row; display: flex;">
@@ -726,7 +726,7 @@
 													@focus="startSearchingProvince"
 													style="padding: 2px; margin-top: 5px; margin-bottom: 5px;"/>
 										
-													<div class="absolute z-10 max-h-48 w-full bg-gray-100 overflow-y-auto shadow" x-show="provinceListShown && filteredProvinces.length" style="max-height: 100px;">
+													<div class="absolute z-10 max-h-48 w-full bg-gray-100 overflow-y-auto shadow" x-show="provinceListShown && filteredProvinces.length" style="max-height: 100px; position: absolute; z-index: 10; background-color: snow; width: 170px; cursor: default; display: none;">
 													<ul class="list-none" style="list-style-type: none;padding-inline-start: 0px !important;overflow-y: scroll; max-height: 100px; margin-left: auto;">
 														<template x-for="(item, idx) of filteredProvinces" :key="idx">
 														<li
@@ -747,7 +747,7 @@
 													@input.debounce="searchDistrictOnTyping"
 													style="padding: 2px; margin-top: 5px; margin-bottom: 5px;"/>
 										
-													<div class="absolute z-10 max-h-48 w-full bg-gray-100 overflow-y-auto shadow"x-show="districtListShown && filteredDistricts.length">
+													<div class="absolute z-10 max-h-48 w-full bg-gray-100 overflow-y-auto shadow"x-show="districtListShown && filteredDistricts.length" style=" position: absolute; z-index: 10; background-color: snow; width: 170px; cursor: default; display: none;">
 													<ul class="list-none" style="list-style-type: none;padding-inline-start: 0px !important;overflow-y: scroll; max-height: 100px; margin-left: auto;">
 														<template x-for="(item, idx) of filteredDistricts" :key="idx">
 														<li
@@ -767,7 +767,7 @@
 													@focus="startSearchingWard"
 													style="padding: 2px; margin-top: 5px; margin-bottom: 5px;"/>
 										
-													<div class="absolute z-10 max-h-48 w-full bg-gray-100 overflow-y-auto shadow " x-show="wardListShown && filteredWards.length">
+													<div class="absolute z-10 max-h-48 w-full bg-gray-100 overflow-y-auto shadow " x-show="wardListShown && filteredWards.length" style=" position: absolute; z-index: 10; background-color: snow; width: 170px; cursor: default; display: none;">
 													<ul class="list-none" style="list-style-type: none;padding-inline-start: 0px !important;overflow-y: scroll; max-height: 100px; margin-left: auto;">
 														<template x-for="(item, idx) of filteredWards" :key="idx">
 														<li
