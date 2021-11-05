@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>List Course</title>
+		<title>List editCourse</title>
 
 		<meta name="description" content="3 styles with inline editable feature" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -635,43 +635,32 @@
 														<input type="checkbox" class="ace" />
 														<span class="lbl"></span>
 													</label>
-												</th>
+												</th> 
 												<th>#</th>
-												
 												<th class="hidden-480">Name</th>
-
-												
 												<th class="hidden-480">Topic</th>
-												
 												<th class="hidden-480">Schedule</th>
 												<th class="hidden-480">Trainer Assign</th>
-												<th class="hidden-480">Create Time</th>
-
-
+												<th class="hidden-480">Create time</th>
 												<th class="hidden-480">Action</th>
 											</tr>
 										</thead>
 										
-										<tbody id="course">
+										<tbody id ="listtopic">
 											<tr> 
 												 <td class="center">
 													<label class="pos-rel">
 														<input type="checkbox" class="ace" />
 														<span class="lbl"></span>
 													</label>
-												</td>
+												</td> 
 
-												<td>
-													1
-												</td>
-												
-												<td class="hidden-480">abc</td>
+												<td> 1 </td>
+												<td class="hidden-480">Course 1</td>
 												<td>Topic description</td>
-												<td>Feb 12</td>
-												<td>xyz</td>
-
-												<td > Feb 11
-												</td>
+												<td>Feb 12 </td>
+												<td>Teacher 1 </td>
+												<td>Feb 11 </td>
 
 												<td>
 													<div class="hidden-sm hidden-xs action-buttons">
@@ -683,7 +672,7 @@
 															<i class="ace-icon fa fa-pencil bigger-130"></i>
 														</a>
 
-														<a class="red" href="#" onclick="deletelist(this)">
+														<a class="red" href="#" onclick="deletetopic(this)">
 															<i class="ace-icon fa fa-trash-o bigger-130"></i>
 														</a>
 													</div>
@@ -701,18 +690,17 @@
 																			<i class="ace-icon fa fa-search-plus bigger-120"></i>
 																		</span>
 																	</a>
-																</li>
+																</li> 
 
 																<li>
-																	<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+																	<a href="editCourse.html" class="tooltip-success" data-rel="tooltip" title="Edit">
 																		<span class="green">
 																			<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
 																		</span>
 																	</a>
 																</li>
-
 																<li>
-																	<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																	<a class="red" href="#" onclick="deletetopic(this)">
 																		<span class="red">
 																			<i class="ace-icon fa fa-trash-o bigger-120"></i>
 																		</span>
@@ -724,27 +712,23 @@
 												</td>
 											</tr>
 											<tr> 
-												<td class="center">
+												 <td class="center">
 													<label class="pos-rel">
 														<input type="checkbox" class="ace" />
 														<span class="lbl"></span>
 													</label>
-												</td> 
-												<td>
-													2
 												</td>
-												
-												<td class="hidden-480">bbc</td>
-												<td>Topic</td>
-												<td>Feb 13</td>
-												<td>xyz</td>
 
-												<td > Feb 13
-												</td>
+												<td> 2 </td>
+												<td class="hidden-480">Course 2</td>
+												<td>Topic description</td>
+												<td>Feb 13 </td>
+												<td>Teacher 2 </td>
+												<td>Feb 13 </td>
 
 												<td>
 													<div class="hidden-sm hidden-xs action-buttons">
-														<a class="blue" href="#">
+														 <a class="blue" href="#">
 															<i class="ace-icon fa fa-search-plus bigger-130"></i>
 														</a> 
 
@@ -752,7 +736,7 @@
 															<i class="ace-icon fa fa-pencil bigger-130"></i>
 														</a>
 
-														<a class="red" href="#" onclick="deletelist(this)">
+														<a class="red" href="#" onclick="deletetopic(this)">
 															<i class="ace-icon fa fa-trash-o bigger-130"></i>
 														</a>
 													</div>
@@ -764,13 +748,13 @@
 															</button>
 
 															<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-																<!-- <li>
+																 <li>
 																	<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
 																		<span class="blue">
 																			<i class="ace-icon fa fa-search-plus bigger-120"></i>
 																		</span>
 																	</a>
-																</li> -->
+																</li> 
 
 																<li>
 																	<a href="editCourse.html" class="tooltip-success" data-rel="tooltip" title="Edit">
@@ -779,9 +763,8 @@
 																		</span>
 																	</a>
 																</li>
-
 																<li>
-																	<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																	<a class="red" href="#" onclick="deletetopic(this)">
 																		<span class="red">
 																			<i class="ace-icon fa fa-trash-o bigger-120"></i>
 																		</span>
@@ -834,7 +817,7 @@
 		</div><!-- /.main-container -->
 
 		<!-- basic scripts -->
-		
+
 		<!--[if !IE]> -->
 		<script src="assets/js/jquery-2.1.4.min.js"></script>
 
@@ -874,7 +857,7 @@
 					bAutoWidth: false,
 					"aoColumns": [
 					  { "bSortable": false },
-					  null, null,null,null,null,null,
+					  null, null, null,null,null,null,
 					  { "bSortable": false }
 					],
 					"aaSorting": [],
@@ -913,7 +896,34 @@
 						"text": "<i class='fa fa-search bigger-110 blue'></i> <span class='hidden'>Show/hide columns</span>",
 						"className": "btn btn-white btn-primary btn-bold",
 						columns: ':not(:first):not(:last)'
-					  },	  
+					  },
+					  {
+						"extend": "copy",
+						"text": "<i class='fa fa-copy bigger-110 pink'></i> <span class='hidden'>Copy to clipboard</span>",
+						"className": "btn btn-white btn-primary btn-bold"
+					  },
+					  {
+						"extend": "csv",
+						"text": "<i class='fa fa-database bigger-110 orange'></i> <span class='hidden'>Export to CSV</span>",
+						"className": "btn btn-white btn-primary btn-bold"
+					  },
+					  {
+						"extend": "excel",
+						"text": "<i class='fa fa-file-excel-o bigger-110 green'></i> <span class='hidden'>Export to Excel</span>",
+						"className": "btn btn-white btn-primary btn-bold"
+					  },
+					  {
+						"extend": "pdf",
+						"text": "<i class='fa fa-file-pdf-o bigger-110 red'></i> <span class='hidden'>Export to PDF</span>",
+						"className": "btn btn-white btn-primary btn-bold"
+					  },
+					  {
+						"extend": "print",
+						"text": "<i class='fa fa-print bigger-110 grey'></i> <span class='hidden'>Print</span>",
+						"className": "btn btn-white btn-primary btn-bold",
+						autoPrint: false,
+						message: 'This print was produced using the Print button for DataTables'
+					  }		  
 					]
 				} );
 				myTable.buttons().container().appendTo( $('.tableTools-container') );
