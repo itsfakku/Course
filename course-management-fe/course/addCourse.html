@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>Add Course</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="/assets/css/bootstrap-datetimepicker.min.css" />
+
+    <link rel="stylesheet" href="/assets/css/jquery-ui.custom.min.css" />
+    <link rel="stylesheet" href="/assets/css/chosen.min.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" href="/assets/css/daterangepicker.min.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap-colorpicker.min.css" />
+    <link rel="stylesheet" href="/assets/css/dropzone.min.css" />
+    <!-- page specific plugin styles -->
+    <style>
+        #tableData thead th {
+            position: sticky;
+            top: 0;
+            background-color: #ddd;
+            color: #707070;
+        }
+        
+        #teacher1 thead th {
+            position: sticky;
+            top: 0;
+            background-color: #ddd;
+            color: #707070;
+        }
+    </style>
+    <!-- text fonts -->
+    <link rel="stylesheet" href="/assets/css/fonts.googleapis.com.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+    <!--[if lte IE 9]>
+        <link
+          rel="stylesheet"
+          href="assets/css/ace-part2.min.css"
+          class="ace-main-stylesheet"
+        />
+      <![endif]-->
+    <link rel="stylesheet" href="/assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="/assets/css/ace-rtl.min.css" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+      <![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+    <script src="/assets/js/ace-extra.min.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+      <![endif]-->
+
+    <!--custome style-->
+    <link rel="stylesheet" href="/assets/css/style.csss" />
+</head>
+
+<body class="no-skin">
+    <div id="navbar" class="navbar navbar-default ace-save-state">
+        <div class="navbar-container ace-save-state" id="navbar-container">
+            <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+          <span class="sr-only">Toggle sidebar</span>
+
+          <span class="icon-bar"></span>
+
+          <span class="icon-bar"></span>
+
+          <span class="icon-bar"></span>
+        </button>
+
+            <div class="navbar-header pull-left">
+                <a href="/index.html" class="navbar-brand">
+                    <small>
+              <i class="fa fa-leaf"></i>
+              CMS
+            </small>
+                </a>
+            </div>
+
+            <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                <ul class="nav ace-nav">
+                    <li class="light-blue dropdown-modal">
+                        <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                            <img class="nav-user-photo" src="/assets/images/avatars/user.jpg" alt="Jason's Photo" />
+                            <span class="user-info">
+                  <small>Welcome,</small>
+                  <div id ="usernames"></div>
+                </span>
+
+                            <i class="ace-icon fa fa-caret-down"></i>
+                        </a>
+
+                        <ul class="
+                    user-menu
+                    dropdown-menu-right
+                    dropdown-menu
+                    dropdown-yellow
+                    dropdown-caret
+                    dropdown-close
+                  ">
+                            <li>
+                                <a href="/account/proFile.html">
+                                    <i class="ace-icon fa fa-user"></i> Profile
+                                </a>
+                            </li>
+
+                            <li class="divider"></li>
+
+                            <li>
+                                <a href="#" onclick="removeToken()">
+                                    <i class="ace-icon fa fa-power-off"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-container -->
+    </div>
+
+    <div class="main-container ace-save-state" id="main-container">
+        <script type="text/javascript">
+            try {
+                ace.settings.loadState("main-container");
+            } catch (e) {}
+        </script>
+
+        <div id="sidebar" class="sidebar responsive ace-save-state">
+            <script type="text/javascript">
+                try {
+                    ace.settings.loadState("sidebar");
+                } catch (e) {}
+            </script>
+            <ul class="nav nav-list">
+                <li class="">
+                    <a href="/index.html">
+                        <i class="menu-icon fa fa-tachometer"></i>
+                        <span class="menu-text"> Dashboard </span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/category/listCategory.html">
+                        <i class="menu-icon fa fa-list"></i>
+                        <span class="menu-text"> Manage Category </span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/topic/listTopic.html">
+                        <i class="menu-icon fa fa-list"></i>
+                        <span class="menu-text"> Manage Topic </span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="/course/course.html">
+                        <i class="menu-icon fa fa-list"></i>
+                        <span class="menu-text"> Manage Course </span>
+                    </a>
+                </li>
+                <!-- <li class="">
+            <a href="" class="dropdown-toggle">
+                <i class="menu-icon fa fa-user"></i>
+                <span class="menu-text"> User </span>
+
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+
+            <b class="arrow"></b>
+
+            <ul class="submenu">
+
+
+                <li class="">
+                    <a href="/account/listUser.html">
+                        <i class="menu-icon fa fa-caret-right"></i> List User
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+
+
+
+                <b class="arrow"></b>
+        </li> -->
+                <li class="">
+                    <a href="/account/listUser.html">
+                        <i class="menu-icon fa fa-user"></i>
+                        <span class="menu-text"> Manage User </span>
+                    </a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+
+            <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+                <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="ace-icon fa fa-home home-icon"></i>
+                            <a href="../index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="course.html">Course</a>
+                        </li>
+                        <li class="active">Add course</li>
+                    </ul>
+                    <!-- /.breadcrumb -->
+                </div>
+
+                <div class="page-content">
+                    <div class="ace-settings-container" id="ace-settings-container">
+
+                    </div>
+
+                    <div class="ace-settings-box clearfix" id="ace-settings-box">
+                        <div class="pull-left width-50">
+                            <div class="ace-settings-item">
+                                <div class="pull-left">
+                                </div>
+                            </div>
+
+                            <div class="ace-settings-item">
+                            </div>
+
+                            <div class="ace-settings-item">
+                            </div>
+
+                            <div class="ace-settings-item">
+                            </div>
+
+                            <div class="ace-settings-item">
+                            </div>
+
+                            <div class="ace-settings-item">
+                            </div>
+                        </div>
+                        <!-- /.pull-left -->
+
+                        <div class="pull-left width-50">
+                            <div class="ace-settings-item">
+                            </div>
+
+                            <div class="ace-settings-item">
+                            </div>
+
+                            <div class="ace-settings-item">
+                            </div>
+                        </div>
+                        <!-- /.pull-left -->
+                    </div>
+                    <!-- /.ace-settings-box -->
+                    <!-- /.ace-settings-container -->
+                    <!-- /.ace-settings-container -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- PAGE CONTENT BEGINS -->
+                            <form class="addcourse" action="/addcourse" method="post">
+                                <!-- form header -->
+                                <div class="form-header">
+                                    <h2>Add Course</h2>
+                                </div>
+                                <!-- form body -->
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-md-6" style="border: 2px solid #ddd; margin-left : 60px; min-height: 525px; max-height: 525px;">
+                                            <!--course name-->
+                                            <div class="form-group">
+                                                <label for="cname">Course's name</label>
+                                                <input type="text" name="cname" id="cname" placeholder="Enter name" />
+                                                <span id="cnameError" style="color: red;"></span>
+                                            </div>
+                                            <!--choose topic-->
+                                            <div class="form-group">
+                                                <label for="topic">Choose Topic</label>
+                                                <select onchange="getTeacher()" class="form-select" aria-label="Default select example" name="topic" id="topic">
+                                                <option selected>Select a topic</option>
+                                                <!-- <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option> -->
+                                            </select>
+                                            </div>
+                                            <!--choose teacher-->
+                                            <div class="form-group" id="teacher">
+                                                <label>Teacher</label>
+                                                <input type="text" id="search" onkeyup="Search()" placeholder="Search teacher" /></br>
+                                                </br>
+                                                <div id="scroll" style="height: 150px; overflow: auto;">
+                                                    <table id="tableData" style="cursor: pointer; border: 1px solid #ddd;" class="table table-borderless table-hover">
+                                                        <thead>
+                                                            <th>Id</th>
+                                                            <th>Name</th>
+                                                            <th>Email</th>
+                                                        </thead>
+                                                        <tbody id="addbody">
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <label>Current teacher</label>
+                                                <div id="scroll" style="height: 110px; overflow: auto;">
+                                                    <table class="table table-borderless" id="teacher1" style="border: 1px solid #ddd;">
+                                                        <thead>
+                                                            <th>Id</th>
+                                                            <th>Name</th>
+                                                            <th>Email</th>
+                                                            <th></th>
+
+                                                        </thead>
+                                                        <tbody id="bodyt">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End of choose teacher-->
+                                        <div class="col-md-5" style="border: 2px solid #ddd; margin-left: 30px; min-height: 525px;">
+                                            <!--choose category-->
+                                            <div class="form-group">
+                                                <label for="cate">Choose Category</label>
+                                                <select class="form-select" aria-label="" name="cate" id="cate">
+                                                <!-- <option selected>Select a category</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option> -->
+                                                </select>
+                                            </div>
+
+                                            <!--add enroll code-->
+                                            <div class="form-group">
+                                                <label for="code">Enroll Code</label>
+                                                <input type="text" name="code" id="code" placeholder="Enter code" />
+                                                <span id="courseCodeError" style="color: red;"></span>
+                                            </div>
+
+                                            <!--schedule-->
+                                            <div class="form-group">
+                                                <label for="id-date-range-picker-1">Schedule</label>
+
+                                                <div class="row">
+                                                    <div class="col-xs-8 col-sm-12">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                            <i class="fa fa-calendar bigger-110"></i>
+                                                            </span>
+
+                                                            <input class="form-control" type="text" name="daterange" id="date" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!--des-->
+                                            <div class="form-group">
+                                                <label for="desc">Description</label>
+                                                <textarea name="" id="des" cols="30" rows="10" style="margin-bottom: 4px;" placeholder="text..."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- form footer -->
+                            </form>
+                            <!-- PAGE CONTENT ENDS -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.page-content -->
+                <div class="form-footer" style="float: right; margin-right: 54px">
+                    <button class="btn btn-white btn-default btn-round">
+              <i class="ace-icon fa fa-times red2"></i>
+              Cancel
+            </button>
+
+                    <button onclick="addCourse()" class="btn btn-white btn-info btn-round" id="create">
+              <i class="ace-icon fa fa-floppy-o bigger-120 blue"></i>
+              Save
+            </button>
+                </div>
+            </div>
+        </div>
+        <!-- /.main-content -->
+
+        <div class="footer">
+            <div class="footer-inner">
+                <div class="footer-content">
+                    <span class="bigger-120">
+              <span class="blue bolder">@</span> fptlearning
+                    </span>
+
+                    &nbsp; &nbsp;
+                    <span class="action-buttons">
+              <a href="#">
+                <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+              </a>
+
+              <a href="#">
+                <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+              </a>
+
+              <a href="#">
+                <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+              </a>
+            </span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div>
+    <!-- /.main-container -->
+
+    <!-- basic scripts -->
+
+    <!--[if !IE]> -->
+    <script src="/assets/js/jquery-2.1.4.min.js"></script>
+
+    <!-- <![endif]-->
+
+    <!--[if IE]>
+        <script src="assets/js/jquery-1.11.3.min.js"></script>
+      <![endif]-->
+    <script type="text/javascript">
+        if ("ontouchstart" in document.documentElement)
+            document.write(
+                "<script src='assets/js/jquery.mobile.custom.min.js'>" +
+                "<" +
+                "/script>"
+            );
+
+        //datepicker plugin
+        //link
+        $(".date-picker")
+            .datepicker({
+                autoclose: true,
+                todayHighlight: true,
+            })
+            //show datepicker when clicking on the icon
+            .next()
+            .on(ace.click_event, function() {
+                $(this).prev().focus();
+            });
+
+        //or change it into a date range picker
+        $(".input-daterange").datepicker({
+            autoclose: true
+        });
+
+        //to translate the daterange picker, please copy the "examples/daterange-fr.js" contents here before initialization
+        $("input[name=date-range-picker]")
+            .daterangepicker({
+                applyClass: "btn-sm btn-success",
+                cancelClass: "btn-sm btn-default",
+                locale: {
+                    applyLabel: "Apply",
+                    cancelLabel: "Cancel",
+                },
+            })
+            .prev()
+            .on(ace.click_event, function() {
+                $(this).next().focus();
+            });
+    </script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- page specific plugin scripts -->
+
+    <!-- ace scripts -->
+    <script src="/assets/js/ace-elements.min.js"></script>
+    <script src="/assets/js/ace.min.js"></script>
+
+    <!--date range picker -->
+    <!-- <script>
+        $(function() {
+            $('input[name="daterange"]').daterangepicker({
+                    opens: "left",
+                },
+                function(start, end, label) {
+                    console.log(
+                        "A new date selection was made: " +
+                        start.format("YYYY-MM-DD") +
+                        " to " +
+                        end.format("YYYY-MM-DD")
+                    );
+                }
+            );
+        });
+    </script> -->
+    <!--end date range picker-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- page specific plugin scripts -->
+    <script src="/assets/js/jquery.bootstrap-duallistbox.min.js"></script>
+    <script src="/assets/js/jquery.raty.min.js"></script>
+    <script src="/assets/js/bootstrap-multiselect.min.js"></script>
+    <script src="/assets/js/select2.min.js"></script>
+    <script src="/assets/js/jquery-typeahead.js"></script>
+
+    <!-- inline scripts related to this page -->
+    <script type="text/javascript">
+        jQuery(function($) {
+            var demo1 = $(
+                'select[name="duallistbox_demo1[]"]'
+            ).bootstrapDualListbox({
+                infoTextFiltered: '<span class="label label-purple label-lg">Filtered</span>',
+            });
+            var container1 = demo1.bootstrapDualListbox("getContainer");
+            container1.find(".btn").addClass("btn-white btn-info btn-bold");
+            $(".rating").raty({
+                cancel: true,
+                half: true,
+                starType: "i",
+            });
+        });
+    </script>
+
+    <!-- inline scripts related to this page -->
+    <script src="/assets/api/addCourseTeacher.js"></script>
+    <script src="/assets/js/daterangepicker.min.js"></script>
+    <script src="/assets/api/addCourse.js"></script>
+    <script src="/assets/api/validateCourse.js"></script>
+
+    <script src="/assets/api/logout.js"></script>
+    <script src="/assets/api/acesstoken.js"></script>
+    <script src="/assets/api/loginName.js"></script>
+</body>
+
+</html>
